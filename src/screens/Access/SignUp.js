@@ -11,7 +11,7 @@ export default function SignUp() {
     
         const [offset] = useState(new Animated.ValueXY({x: 75, y: 0})); //estado inical: x=70
         const [opacity] = useState(new Animated.Value(0)); //estado inical da opacidade=0
-        const [logo] = useState(new Animated.ValueXY({x: 130, y: 130})); //estado inical: x=70
+        const [logo] = useState(new Animated.ValueXY({x: 100, y: 100})); //estado inical: x=70
 
         useEffect(()=> { 
 
@@ -21,7 +21,7 @@ export default function SignUp() {
             Animated.parallel([
                 Animated.spring(offset.x, {
                     toValue: 0, //ir para x=0
-                    speed: 5,  
+                    speed: 4,  
                     bounciness: 30
                 }),
                 Animated.timing(opacity, {
@@ -31,15 +31,16 @@ export default function SignUp() {
             ]).start();
         }, []);
 
+          //Animacao para encolher a imagem quando abrir o teclado
         function keyboardDidShow () {
             console.log('teclado aberto');
             Animated.parallel([
                 Animated.timing(logo.x, {
-                    toValue: 10, //ir para opacidade 1 em 400ms
+                    toValue: 50,
                     duration: 100
                 }),
                 Animated.timing(logo.y, {
-                    toValue: 10, //ir para opacidade 1 em 400ms
+                    toValue: 50, 
                     duration: 100
                 })
             ]).start();
@@ -47,13 +48,14 @@ export default function SignUp() {
 
         function keyboardDidHide () {
             console.log('teclado fechado');
+          
             Animated.parallel([
                 Animated.timing(logo.x, {
-                    toValue: 130, //ir para opacidade 1 em 400ms
+                    toValue: 130, 
                     duration: 100
                 }),
                 Animated.timing(logo.y, {
-                    toValue: 130, //ir para opacidade 1 em 400ms
+                    toValue: 130, 
                     duration: 100
                 })
             ]).start();
@@ -66,6 +68,7 @@ export default function SignUp() {
                <View style={globalStyles.containerLogo}>
                     <Animated.Image style={{width: 100, height: 100}} source={require('../../assets/icon.png')}/>
                 </View>
+
                 <Animated.View 
                     style={[
                         globalStyles.container, 
