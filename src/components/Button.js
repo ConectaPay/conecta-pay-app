@@ -19,8 +19,8 @@ export default class Button extends Component {
 
                 <Text style={
                   type == 'primary' ? 
-                  {color: 'white', fontSize: fonts.input} : 
-                  {color: 'black', fontSize: fonts.input}
+                  {color: 'white', fontSize: fonts.input} 
+                  : {color: 'black', fontSize: fonts.input}
                 }>
                   {title}
                 </Text> 
@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
     shadowRadius: 16.00,
     elevation: 4,
 
-    width: metrics.screenWidth - 75,
   },
   buttonText: {
     fontSize: fonts.input

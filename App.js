@@ -5,6 +5,7 @@ import { StyleSheet, StatusBar, View, Text} from 'react-native';
 
 import Login from './src/screens/Access/Login'; 
 import SignUp from './src/screens/Access/SignUp'; 
+import Welcome from './src/screens/Welcome'; 
 import { colors, metrics } from './src/styles';
 
 
@@ -13,7 +14,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
 
-        <SignUp />
+        <Welcome />
       
       </View>
     );
@@ -22,7 +23,6 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
     height: metrics.screenHeight,
     width: metrics.screenWidth,
     borderTopColor: colors.primaryDark, //status bar
