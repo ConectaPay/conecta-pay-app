@@ -8,13 +8,15 @@ export default class Button extends Component {
     render() {
       const {title, type, onPress} = this.props;
         return (
-            <TouchableOpacity activeOpacity={0.6} >
+            <TouchableOpacity activeOpacity={0.6} style={[styles.container, styles.common]}>
 
-              <LinearGradient style={styles.container}
-                end={[0.9, 0.3]}
-                colors={ 
+              <LinearGradient style={[styles.gradient, styles.common]}
+                start={[0, 0]}
+                end={[1, 1]}
+                locations={[0.2, 0.9]}
+                colors={
                   type == 'primary' ? 
-                  ['#3E2180','#7C42FF'] : ['white','#f9f9f9']
+                  ['#3E2180','#7C42FF'] : ['#f9f9f9', 'white']
                 }>
 
                 <Text style={
@@ -24,7 +26,7 @@ export default class Button extends Component {
                 }>
                   {title}
                 </Text> 
-             </LinearGradient>
+              </LinearGradient>
 
             </TouchableOpacity>
         )
@@ -33,20 +35,21 @@ export default class Button extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    padding: metrics.baseMargin,
-    alignItems: 'center', 
-    borderRadius: metrics.baseRadius,
     marginTop: metrics.doubleBaseMargin,
-    shadowColor: 'white',
     shadowOpacity: 0.12,
     shadowRadius: 16.00,
-    elevation: 4,
-
+    elevation: 6,
+    padding: 2
   },
-  buttonText: {
-    fontSize: fonts.input
+  gradient: {
+    padding: 14,
   },
+  common: {
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center', 
+    flexDirection: 'row',
+    borderRadius: metrics.baseRadius,
+  }
 
 })
