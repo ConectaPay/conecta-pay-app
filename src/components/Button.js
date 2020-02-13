@@ -8,7 +8,7 @@ export default class Button extends Component {
     render() {
       const {title, type, onPress} = this.props;
         return (
-            <TouchableOpacity activeOpacity={0.6} style={[styles.container, styles.common]}>
+            <TouchableOpacity activeOpacity={0.7} style={[styles.container, styles.common]}>
 
               <LinearGradient style={[styles.gradient, styles.common]}
                 start={[0, 0]}
@@ -16,7 +16,7 @@ export default class Button extends Component {
                 locations={[0.2, 0.9]}
                 colors={
                   type == 'primary' ? 
-                  ['#3E2180','#7C42FF'] : ['#f9f9f9', 'white']
+                  [colors.primaryDark, colors.primary] : [colors.white, colors.white]
                 }>
 
                 <Text style={
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.12,
     shadowRadius: 16.00,
     elevation: 6,
-    padding: 2
+    padding: 1
   },
   gradient: {
     padding: 14,

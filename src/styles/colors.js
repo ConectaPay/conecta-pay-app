@@ -1,10 +1,9 @@
 const colors = {
     header: '#333333',
-    bgColor: '#F9F9FD',
-    primary: '#069',
+    bgColor: '#F9F9F9',
 
-    primaryDark: '#1A237E',
-    primary: '#3949AB',
+    primaryDark: '#3E2180',
+    primary: '#7C42FF',
     primaryLight: '#F3E5F5', 
 
     magentaDark: '#303f9f',
@@ -12,6 +11,7 @@ const colors = {
 
     darkOrange: '#FFAC30',
 
+    white: '#ffffff',
     blueSky: '#58D8F4',
     pink: '#FF356B',
     magenta: '#3A4276',

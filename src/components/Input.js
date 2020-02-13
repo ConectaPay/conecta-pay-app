@@ -25,8 +25,10 @@ export default class Input extends Component {
       <View style={styles.container}>
         <Icon size={25} style={{ marginRight: 10 }} name={iconName} />
         
-        <TextInput style={styles.inputStyle}
-          maxLength={maxLength} placeholder={hint}
+        <TextInput 
+          style={styles.inputStyle}
+          maxLength={maxLength} 
+          placeholder={hint}
           secureTextEntry={type == 'password' ? true : false}
           keyboardType={inputType}
         />

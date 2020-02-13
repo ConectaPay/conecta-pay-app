@@ -14,7 +14,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
 
-        <Login />
+        <Welcome />
       
       </View>
     );
