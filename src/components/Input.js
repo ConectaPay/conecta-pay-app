@@ -27,8 +27,7 @@ export default class Input extends Component {
         
         <TextInput 
           style={styles.inputStyle}
-          maxLength={maxLength} 
-          placeholder={hint}
+          maxLength={maxLength} placeholder={hint}
           secureTextEntry={type == 'password' ? true : false}
           keyboardType={inputType}
         />

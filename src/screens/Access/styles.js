@@ -3,7 +3,7 @@ import { metrics, fonts, colors } from '../../styles';
 
 const styles = StyleSheet.create({
     backgorund: {
-        height: '100%',
+        flex: 1,
         alignItems: 'center',
         backgroundColor: colors.bgColor //#F9F9FA - #F1F3F6
     },

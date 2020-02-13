@@ -1,6 +1,6 @@
 const colors = {
     header: '#333333',
-    bgColor: '#F9F9F9',
+    bgColor: '#F9F9F8',
 
     primaryDark: '#3E2180',
     primary: '#7C42FF',
