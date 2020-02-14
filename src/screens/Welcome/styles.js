@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     },
     title: {
         flex: 0.1,
+        marginTop: metrics.doubleBaseMargin,
         fontSize: fonts.big + fonts.big,
         fontWeight: 'bold'
     },

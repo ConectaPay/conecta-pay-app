@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet,Image, View, TouchableOpacity, TouchableNativeFeedback, TouchableHighlight } from 'react-native'
+import { Text, StyleSheet, View } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { colors, fonts, metrics } from '../styles'
 
+
 export default class Button extends Component {
     render() {
-      const {title, type, onPress} = this.props;
+      const {title, type} = this.props;
         return (
-            <TouchableOpacity activeOpacity={0.7} style={[styles.container, styles.common]}>
+            <View style={[styles.common, styles.container]}>
 
-              <LinearGradient style={[styles.gradient, styles.common]}
+              <LinearGradient style={[styles.common, styles.gradient]}
                 start={[0, 0]}
                 end={[1, 1]}
                 locations={[0.2, 0.9]}
@@ -28,28 +29,25 @@ export default class Button extends Component {
                 </Text> 
               </LinearGradient>
 
-            </TouchableOpacity>
+            </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
   container: {
+    height: 45,
     marginTop: metrics.baseMargin,
-    shadowOpacity: 0.12,
-    shadowRadius: 16.00,
-    elevation: 6,
-    padding: 1
-  },
-  gradient: {
-    padding: 14,
+    shadowColor: colors.grayLight,
   },
   common: {
+    height: 45,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center', 
     flexDirection: 'row',
     borderRadius: metrics.baseRadius,
+    elevation: 1
   }
 
 })

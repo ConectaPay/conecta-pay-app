@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-gesture-handler@~1.5.0
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @react-navigation/bottom-tabs
 
 PATH: 
   C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_51\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\MongoDB\Server\4.2\bin;D:\SDK\platform-tools;D:\SDK\tools;C:\Users\Edson Paulo\AppData\Local\Microsoft\WindowsApps;;C:\Users\Edson Paulo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Edson Paulo\AppData\Roaming\npm;C:\Users\Edson Paulo\AppData\Local\Yarn\bin
@@ -14,8 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+  Error: Client network socket disconnected before secure TLS connection was established
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1088:19)
+      at Object.onceWrapper (events.js:277:13)
+      at TLSSocket.emit (events.js:194:15)
+      at endReadableNT (_stream_readable.js:1125:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
 
 npm manifest: 
   {
@@ -37,6 +41,7 @@ npm manifest:
       "react": "~16.9.0",
       "react-dom": "~16.9.0",
       "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+      "react-native-gesture-handler": "^1.5.3",
       "react-native-reanimated": "~1.4.0",
       "react-native-safe-area-context": "0.6.0",
       "react-native-screens": "2.0.0-alpha.12",

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View, TextInput, Image } from 'react-native'
 import Icon from 'react-native-vector-icons/Feather';
 
-
 import { colors, fonts, metrics } from '../styles';
 
 export default class Input extends Component {
@@ -23,12 +22,13 @@ export default class Input extends Component {
 
     return (
       <View style={styles.container}>
-        <Icon size={25} style={{ marginRight: 10 }} name={iconName} />
+        <Icon size={25} style={{ marginRight: metrics.baseMargin }} name={iconName} />
         
         <TextInput 
           style={styles.inputStyle}
-          maxLength={maxLength} placeholder={hint}
-          secureTextEntry={type == 'password' ? true : false}
+          placeholder={hint}
+          maxLength={maxLength} 
+          secureTextEntry={type == 'password'}
           keyboardType={inputType}
         />
 

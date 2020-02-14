@@ -8,7 +8,7 @@ import Button from '../../components/Button'
 
 export default function Home() {
   return (
-    <View style={{flex: 1}}>
+    <View>
         <Text>Home</Text>
         <Button />
     </View>
