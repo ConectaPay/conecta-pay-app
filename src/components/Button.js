@@ -35,7 +35,7 @@ export default class Button extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: metrics.doubleBaseMargin,
+    marginTop: metrics.baseMargin,
     shadowOpacity: 0.12,
     shadowRadius: 16.00,
     elevation: 6,

@@ -14,8 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: read ECONNRESET
-      at TLSWrap.onStreamRead (internal/stream_base_commons.js:111:27)
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
 
 npm manifest: 
   {

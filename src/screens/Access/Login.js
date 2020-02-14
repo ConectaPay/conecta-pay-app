@@ -8,7 +8,6 @@ import {
 
 import Button from '../../components/Button'
 import Input from '../../components/Input'
-import AppBar from '../../components/AppBar'
 import styles from './styles'
 
 export default function Login() {
@@ -23,46 +22,42 @@ export default function Login() {
 
         Animated.spring(offset.x, {
             toValue: 0, //ir para x=0
-            speed: 4,  
-            bounciness: 30
+            speed: 6,  
+            bounciness: 25
         }).start();
 
     }, []);
 
     //Animacao para reduzir a imagem ao abrir o teclado
     function keyboardDidShow () {
-        console.log('teclado aberto');
         Animated.parallel([
             Animated.timing(logo.x, {
                 toValue: 70,
-                duration: 10
+                duration: 300
             }),
             Animated.timing(logo.y, {
                 toValue: 70, 
-                duration: 10
+                duration: 300
             })
         ]).start();
     }
 
     //aumentar a imagem ao fechar teclado
     function keyboardDidHide () {
-        console.log('teclado fechado');
         Animated.parallel([
             Animated.timing(logo.x, {
                 toValue: 125, 
-                duration: 10
+                duration: 300
             }),
             Animated.timing(logo.y, {
                 toValue: 125, 
-                duration: 10
+                duration: 300
             })
         ]).start();
     }
     
         return (
             <KeyboardAvoidingView style={styles.backgorund}>
-                <AppBar title='ENTRAR NA CONTA' />
-
                 <Animated.Image 
                     style={{ 
                         marginTop: 60,
@@ -75,7 +70,7 @@ export default function Login() {
                 <Animated.View 
                     style={[
                         styles.container, 
-                        { transform: [{translateY: offset.y}] }
+                        { transform: [{translateX: offset.x}] }
                     ]}>
 
                     <Input style={styles.inputStyle} type='phone' hint='Telefone' maxLength={12} />
