@@ -1,6 +1,6 @@
 import { StyleSheet} from 'react-native'
 
-import { metrics, fonts } from '../../styles'
+import { metrics, fonts, colors } from '../../styles'
 
 
 const styles = StyleSheet.create({
@@ -13,16 +13,18 @@ const styles = StyleSheet.create({
     title: {
         flex: 0.1,
         marginTop: metrics.doubleBaseMargin,
+        color: colors.primaryDark,
         fontSize: fonts.big + fonts.big,
         fontWeight: 'bold'
     },
     slogan: {
         flex: 0.1,
+        color: colors.primary,
         fontSize: fonts.big,
         marginTop: metrics.baseMargin,
     },
     image: {
-        flex: 0.8,
+        flex: 1,
         width: '100%',
         margin: metrics.tripleBaseMargin,
     },

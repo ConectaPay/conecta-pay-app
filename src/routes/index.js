@@ -7,6 +7,7 @@ import { createStackNavigator , TransitionPresets } from '@react-navigation/stac
 import { StyleSheet, StatusBar } from 'react-native';
 
 
+
 import { colors, metrics, fonts } from '../styles';
 
 import Welcome from '../screens/Welcome';
@@ -14,19 +15,11 @@ import Login from '../screens/Access/Login';
 import SignUp from '../screens/Access/SignUp';
 import Home from '../screens/Home';
 
-function AccessNavigation(){
+import Header from '../components/Header';
 
-  const config = {
-    animation: 'spring',
-    config: {
-      stiffness: 1000,
-      damping: 500,
-      mass: 3,
-      overshootClamping: true,
-      restDisplacementThreshold: 0.01,
-      restSpeedThreshold: 0.01,
-    },
-  };
+import { Button } from '../components';
+
+function AccessNavigation(){
   
   const AccessStack = createStackNavigator();
   
@@ -36,11 +29,7 @@ function AccessNavigation(){
         <AccessStack.Navigator 
           initialRouteName="Welcome"         
           screenOptions={{
-            transitionSpec: {
-              open: config,
-              close: config,
-            },
-            ...TransitionPresets.DefaultTransition,
+           
            // gestureDirection: 'horizontal',
            // gestureEnabled: true,
             headerStyle: {
@@ -83,22 +72,37 @@ function AccessNavigation(){
             name="Home" 
             component={Home} 
             options={{
-
-              headerTitle:{
-               // props => <Componentpesonalizado {...props} />,
-              } ,
-
+              headerShown: true,
               safeAreaInsets: {
-                bottom: 60
+                bottom: 80,
+                top: StatusBar.currentHeight,
               },
               title: 'CONECTA PAY',
               headerStyle: {
-                backgroundColor: colors.primaryDark,
-                height: 200,
-                borderBottomLeftRadius: 20,
-                borderBottomRightRadius: 20,
+                height: 200, 
+                backgroundColor: colors.primaryDark
               },
+               
+              header: ({ scene, previous, navigation }) => {
+                const { options } = scene.descriptor;
+                const title =
+                  options.headerTitle !== undefined
+                    ? options.headerTitle
+                    : options.title !== undefined
+                    ? options.title
+                    : scene.route.name;
               
+                return (
+                  <Header
+                    title={title}
+                    leftButton={
+                      previous ? <Button onPress={navigation.goBack} /> : undefined
+                    }
+                  />
+                );
+              }
+
+
             }}
           />
 

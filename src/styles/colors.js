@@ -3,7 +3,11 @@ const colors = {
     bgColor: '#F9F9F8',
 
     primaryDark: '#3E2180',
-    primary: '#7C42FF',
+    primary: '#E91E63',
+    primaryLight: '#F3E5F5', 
+
+    primaryDark: '#D81B60',
+    primary: '#FF4081',
     primaryLight: '#F3E5F5', 
 
     magentaDark: '#303f9f',
