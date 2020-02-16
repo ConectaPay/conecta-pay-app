@@ -3,8 +3,6 @@ import { Text, StyleSheet, View } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { colors, fonts, metrics } from '../styles'
-
-
 export default class Button extends Component {
     render() {
       const {title, type} = this.props;
@@ -39,6 +37,7 @@ const styles = StyleSheet.create({
     height: 45,
     marginTop: metrics.baseMargin,
     shadowColor: colors.grayLight,
+
   },
   common: {
     height: 45,

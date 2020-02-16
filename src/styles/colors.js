@@ -1,6 +1,6 @@
 const colors = {
     header: '#333333',
-    bgColor: '#F9F9F8',
+    bgColor: '#FFFff1',
 
     primaryDark: '#3E2180',
     primary: '#E91E63',
@@ -8,6 +8,10 @@ const colors = {
 
     primaryDark: '#D81B60',
     primary: '#FF4081',
+    primaryLight: '#F3E5F5', 
+
+    primaryDark: '#FF8F00',
+    primary: '#FFCA28',
     primaryLight: '#F3E5F5', 
 
     magentaDark: '#303f9f',

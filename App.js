@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { StyleSheet, StatusBar } from 'react-native';
 
-import { AccessNavigation } from './src/routes';
+import { AccessNavigation } from './src/navigations';
 
 import { colors } from './src/styles';
 

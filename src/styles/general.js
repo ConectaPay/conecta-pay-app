@@ -20,6 +20,7 @@ const general = {
   card: {
     borderRadius: metrics.baseRadius,
     padding: metrics.baseMargin,
+    backgroundColor: 'white',
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.22,

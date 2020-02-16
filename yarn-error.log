@@ -14,12 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: Client network socket disconnected before secure TLS connection was established
-      at TLSSocket.onConnectEnd (_tls_wrap.js:1088:19)
-      at Object.onceWrapper (events.js:277:13)
-      at TLSSocket.emit (events.js:194:15)
-      at endReadableNT (_stream_readable.js:1125:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
+  Error: https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.6.0.tgz: unexpected end of file
+      at Zlib.zlibOnError [as onerror] (zlib.js:154:17)
 
 npm manifest: 
   {
