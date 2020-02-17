@@ -3,13 +3,17 @@ import { StyleSheet, StatusBar } from 'react-native';
 
 import { AccessNavigation } from './src/navigations';
 
+import Intro from './src/components/Intro'
+
 import { colors } from './src/styles';
 
 
 export default class App extends Component {
   render() {
     return (
-      <AccessNavigation />
+      <AccessNavigation /> 
+      
+    // <Intro />
   );
 }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View ,StatusBar, Image, TouchableNativeFeedback, TouchableOpacity } from 'react-native'
-import Icon from 'react-native-vector-icons/Feather';
+import {MaterialCommunityIcons } from '@expo/vector-icons';
+
 
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -17,12 +18,16 @@ export default function HomeHeader () {
         >
 
             <View style={styles.firstBar}>
-                <TouchableOpacity activeOpacity={0.8}>
-                    <Icon size={25} name='menu' style={styles.firstBarChild}/>
-                </TouchableOpacity>
+                <TouchableNativeFeedback background={TouchableNativeFeedback.SelectableBackground()}>
+                
+                    <MaterialCommunityIcons name='menu' style={styles.firstBarChild}/>
+                </TouchableNativeFeedback>
+                   
+               
+
                 <Text style={styles.firstBarChild}>CONECTA</Text>
 
-                <Icon size={25} name='bell' style={styles.firstBarChild} />
+                <MaterialCommunityIcons name='bell' style={styles.firstBarChild} />
             </View>
             
         </LinearGradient>
