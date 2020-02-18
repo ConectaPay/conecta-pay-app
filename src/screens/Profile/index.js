@@ -1,29 +1,34 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, Image} from 'react-native'
 
 import { LinearGradient } from 'expo-linear-gradient';
 
-
 import AwesomeButton from "react-native-really-awesome-button";
-import AwesomeButtonRick from "react-native-really-awesome-button/src/themes/rick";
 
 import styles from './styles'
+import { colors } from '../../styles';
 
 export default class index extends Component {
     render() {
         return (
             <View>
                 <Text> Profile </Text>
-                <AwesomeButton>Button</AwesomeButton>;
-                <AwesomeButtonRick type="primary">Rick's Primary Button</AwesomeButtonRick>
-                <AwesomeButtonRick type="secondary">Rick's Secondary Button</AwesomeButtonRick>
-                <AwesomeButton
-                    ExtraContent={
-                        <LinearGradient colors={["#4C63D2", "#BC3081", "#F47133", "#FED576"]} />
-                    }
-                > 
-                    <Text>Instagram</Text>
+                <AwesomeButton 
+                    onPress={()=>{console.log('clicou')}}
+                    style={{ height:50}}
+                    backgroundDarker={colors.primaryDark}
+                    backgroundColor={colors.primary}
+                    height={50}
+                    borderRadius={15}
+                    stretch
+                    raiseLevel={6}> 
+                     <LinearGradient colors={["red", "gold"]} 
+                        style={{width: '100%', height:'100%',justifyContent:'center', alignItems: 'center'}}
+                        >
+                 <Text style={{color: 'white'}}>Instagram</Text>
+                 </LinearGradient>
                 </AwesomeButton>
+
             </View>
         )
     }

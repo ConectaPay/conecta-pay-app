@@ -1,21 +1,23 @@
 const colors = {
     header: '#333333',
-    bgColor: '#FFFff1',
+    bgColor: '#ECEFF1',
+    
+    primaryDark: '#512DA8',
+    primary: '#5E35D1',
+    primaryLight: '#D1C4E9', 
 
-    primaryDark: '#3E2180',
-    primary: '#E91E63',
-    primaryLight: '#F3E5F5', 
+    primaryDark: '#37474F',
+    primary: '#455A64',
+    primaryLight: '#ECEFF1', 
 
-    primaryDark: '#D81B60',
-    primary: '#FF4081',
-    primaryLight: '#F3E5F5', 
+    primaryDark: '#5A30BA',
+    primary: '#7C42FF',
+    primaryLight: '#ECEFF1',
+    
 
-    primaryDark: '#FF8F00',
-    primary: '#FFCA28',
-    primaryLight: '#F3E5F5', 
-
-    magentaDark: '#303f9f',
-    accent: '#1a237e',
+    gradientLeft: '#7C42FF',
+    gradientCenter: '#5A30BA',
+    gradientRight: '#3E2180',
 
     darkOrange: '#FFAC30',
 

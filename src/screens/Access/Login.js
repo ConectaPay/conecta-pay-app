@@ -7,7 +7,14 @@ import {
     TouchableOpacity
 } from 'react-native'
 
-import {Button, Input} from '../../components'
+import { Input} from '../../components'
+
+import Button from "react-native-really-awesome-button";
+import { LinearGradient } from 'expo-linear-gradient';
+
+import { colors, metrics, fonts, general } from '../../styles'
+
+
 
 import styles from './styles'
 
@@ -19,8 +26,11 @@ export default function Login( {navigation} )
     useEffect(()=> {
         keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', keyboardDidShow); //
         keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', keyboardDidHide);
+        
 
         Animated.spring(offset.x, {
+            
+            useNativeDriver: false,
             toValue: 0, //ir para x=0
             speed: 6,  
             bounciness: 25
@@ -31,6 +41,7 @@ export default function Login( {navigation} )
     function keyboardDidShow () 
     {
         Animated.timing( logo, {
+            useNativeDriver: false,
             toValue: 70, 
             duration: 300
         }).start();
@@ -40,6 +51,7 @@ export default function Login( {navigation} )
     function keyboardDidHide () 
     {
         Animated.timing( logo, {
+            useNativeDriver: false,
             toValue: 125, 
             duration: 300
         }).start();
@@ -64,12 +76,36 @@ export default function Login( {navigation} )
 
                 <Input style={styles.inputStyle} type='phone' hint='Telefone' maxLength={12} />
                 <Input style={styles.inputStyle} type='password' hint='Senha' maxLength={16} />
-                <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('Home')}>
-                    <Button title='ENTRAR' type='primary' />
-                </TouchableOpacity>
+
+          
+
+                <Button 
+                    onPress={() => navigation.navigate('Home') }
+                    style={{ height: 50, marginTop: 20}}
+                    backgroundDarker={colors.primaryDark}
+                    backgroundColor={colors.primary}
+                    height={50}
+                    borderRadius={metrics.doubleBaseRadius}
+                    stretch
+                    raiseLevel={5}
+                > 
+                    <LinearGradient 
+                        start={[0, 0]}
+                        end={[1, 1]}
+                        locations={[0.2, 0.9]}
+                        colors={[colors.primaryDark, colors.primary]}
+                        style={{width: '100%', height:'100%',justifyContent:'center', alignItems: 'center'}}
+                    >
+
+                        <Text style={{color: 'white'}}>ENTRAR</Text>
+
+                    </LinearGradient>
+                </Button>
+
+
                 <Text style={styles.bottomText}>Não tens uma conta? Criar uma conta </Text>
             </Animated.View>
-
+ 
         </KeyboardAvoidingView>
     )
 } 

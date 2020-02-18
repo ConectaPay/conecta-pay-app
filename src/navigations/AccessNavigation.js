@@ -15,7 +15,7 @@ import SignUp from '../screens/Access/SignUp';
 
 import Home from './HomeNavigation';
 
-import { Button, HomeHeader } from '../components';
+import { Button, HeaderBar } from '../components';
 
 export default function AccessNavigation()
 {  
@@ -90,11 +90,9 @@ export default function AccessNavigation()
                   : scene.route.name;
             
               return (
-                <HomeHeader
+                <HeaderBar
                   title={title}
-                  leftButton={
-                    previous ? <Button onPress={navigation.goBack} /> : undefined
-                  }
+                  
                 />
               );
             }

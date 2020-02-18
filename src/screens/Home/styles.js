@@ -8,30 +8,35 @@ const styles = StyleSheet.create({
     background: {
         height: '100%',
         alignItems: 'center',
-        backgroundColor: colors.white,
+        backgroundColor: colors.bgColor,
     },
     topContainer: {
         width: '100%',
         height: 100,
-        marginBottom: 40
+        marginBottom: 50
     },
     card: {
+        width: '90%',
         alignSelf: 'center',
         position: 'absolute',
-        height: 170,
+        height: 155,
         backgroundColor: colors.white,
         zIndex: 1,
     },
     amountBig: {
         fontWeight: 'bold',
-        fontSize: 28
+        fontSize: 28,
+        color: colors.primaryDark,
+        marginLeft: 10,
     },
     amountDescription: {
-        color: colors.dark,
+        color: colors.grayDark,
+        marginLeft: 10,
+
     },
     buttons: {
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         marginTop: metrics.doubleBaseMargin,
     },
     divider: {
@@ -61,28 +66,41 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 4,
     },
+
+    content: {
+        padding: metrics.doubleBaseMargin,
+        width: '100%',
+    },
+    sendToContainerHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+
     sendToContainer: {
         width: '100%',
-        height: 100,
-        margin: 40,
-        backgroundColor: 'green'
-
+        padding: metrics.baseMargin,
+        elevation: 4,
+        height: 150,
+        borderRadius: 15,
+        backgroundColor: 'white',
     },
-    sendToContentContainer:{
-        height: 100,
 
-    },
     historyContainer: {
         width: '100%',
-        margin: 40,
-        paddingLeft: metrics.tripleBaseMargin,
-        paddingRight: metrics.tripleBaseMargin,
-        backgroundColor: 'red'
+        padding: metrics.doubleBaseMargin,
+        elevation: 4,
+        height: 310,
+        borderRadius: 15,
+        backgroundColor: 'white',
+        marginTop: metrics.baseMargin,
     },
-    historyContentContainer: {
-        backgroundColor: 'gray',
-       
+    historyTitle: {
+        fontSize: fonts.medium,
+        fontWeight: 'bold',
+        marginBottom: metrics.smallMargin,
     }
+
+   
 
 })
 

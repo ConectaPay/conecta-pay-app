@@ -6,7 +6,13 @@ import {
     KeyboardAvoidingView
 } from 'react-native'
 
-import {Button, Input} from '../../components'
+import { Input} from '../../components'
+
+import Button from "react-native-really-awesome-button";
+
+import { colors, metrics, fonts, general } from '../../styles'
+
+
 
 import styles from './styles'
 

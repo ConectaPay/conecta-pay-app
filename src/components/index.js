@@ -1,5 +1,7 @@
-import Button from './Button';
-import Input from './Input';
-import HomeHeader from './HomeHeader';
 
-export { Button, Input, HomeHeader };
+import Input from './Input';
+import HeaderBar from './HeaderBar';
+import SendToList from './SendToList';
+import HistoryList from './HistoryList';
+
+export { Input, HeaderBar, SendToList, HistoryList };

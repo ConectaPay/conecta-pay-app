@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { colors, metrics, fonts, general } from '../styles'
 
-export default function HomeHeader () {
+export default function HeaderBar () {
     
     return (
         <LinearGradient style={styles.container}

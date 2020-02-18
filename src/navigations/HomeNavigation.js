@@ -10,6 +10,7 @@ import { colors, metrics, fonts } from '../styles';
 
 import History from '../screens/History';
 import Profile from '../screens/Profile';
+import Settings from '../screens/Settings';
 
 import SignUp from '../screens/Access/SignUp';
 import Home from '../screens/Home';
@@ -20,26 +21,26 @@ export default function HomeNavigation()
        
     return(
         <Tab.Navigator 
-            initialRouteName='HOME'
+            initialRouteName='home'
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused, color, size }) => {
                 let iconName;
 
-                if (route.name === 'HOME') 
+                if (route.name === 'home') 
                     iconName = focused ? 'home' : 'home-outline';
-                 else if (route.name === 'HISTÓRICO') 
+                 else if (route.name === 'history') 
                     iconName = 'history';
-                 else if (route.name === 'QRCODE') 
+                 else if (route.name === 'qrcode') 
                     iconName = 'qrcode-scan';
-                 else if (route.name === 'PERFIL') 
+                 else if (route.name === 'profile') 
                     iconName = focused ? 'account' : 'account-outline';
 
                 // You can return any component that you like here!
-                return(
-                    
-                            <MaterialCommunityIcons name={iconName} size={25} color={color} />
-                            
-                )
+                if(route.name === 'settings')
+                    return( <MaterialCommunityIcons name='plus-circle' style={{position: 'absolute', top: -20}} size={60} color={color} /> )
+                else
+                    return( <MaterialCommunityIcons name={iconName} size={25} color={color} /> )
+            
                 },
             })}
             tabBarOptions={{
@@ -47,28 +48,20 @@ export default function HomeNavigation()
                 inactiveTintColor: colors.grayDark,
                 
                 tabStyle: { 
-                    backgroundColor: '#694fad',
-                    borderTopLeftRadius: 10,
-                    borderTopRightRadius: 10,
-                    height: 80,
                     
                 }
             }}
             
             >
-                <Tab.Screen name="HOME" component={Home}  options={{
+                <Tab.Screen name="home" component={Home} options={{ tabBarLabel: 'HOME'}} />
 
-                    tabBarLabel: 'Home',
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="home" color={color} size={size} />
-                    ),
-                    }}  />
+                <Tab.Screen name="history" component={History}   options={{ tabBarLabel: 'HISTÓRICO', showLabel: false}} />
+                
+                <Tab.Screen name="settings" component={Settings}  options={{  tabBarLabel: ''}}/>
 
-                 Tab.Screen name="HISTÓRICO" component={History} />
+                <Tab.Screen name="qrcode" component={SignUp}  options={{ tabBarLabel: 'QRCODE'}}/>
                 
-                <Tab.Screen name="QRCODE" component={SignUp} />
-                
-                <Tab.Screen name="PERFIL" component={Profile} />
+                <Tab.Screen name="profile"  component={Profile}  options={{ tabBarLabel: 'PERFIL'}}/>
             
             </Tab.Navigator>
     )
