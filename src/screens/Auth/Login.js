@@ -22,7 +22,7 @@ import { colors, general } from '../../styles'
 export default function Login( {navigation} ) 
 {
     const [ offset ] = useState( new Animated.ValueXY( {x: 75, y: 0} )); //estado inical: x=70
-    const [ logo ] = useState( new Animated.ValueXY( {x: 125, y: 125 } )); //estado inical: x=70
+    const [ logo ] = useState( new Animated.ValueXY( {x: 100, y: 100 } )); //estado inical: x=70
 
     const Form = tForm.form.Form;  //extrair componente form do pacote tcomb
     const formRef = React.createRef(); //referencia do formulario para manipular
@@ -87,7 +87,7 @@ export default function Login( {navigation} )
     {
         Animated.timing( logo, {
             useNativeDriver: false,
-            toValue: 70, 
+            toValue: 50, 
             duration: 300
         }).start();
     }
@@ -97,7 +97,7 @@ export default function Login( {navigation} )
     {
         Animated.timing( logo, {
             useNativeDriver: false,
-            toValue: 125, 
+            toValue: 100, 
             duration: 300
         }).start();
     }
@@ -106,11 +106,11 @@ export default function Login( {navigation} )
         <KeyboardAvoidingView style={styles.backgorund}>
             <Animated.Image 
                 style={{ 
-                    marginTop: 40,
+                    marginTop: 50,
                     width: logo.x,
                     height: logo.y
                 }}
-                source={ require('../../assets/splash.png') }
+                source={ require('../../assets/login.png') }
             />
 
             <Animated.View 
@@ -130,10 +130,11 @@ export default function Login( {navigation} )
                             let phone = value.phone;
                             let password = value.password.trim();
                             console.log('Telefone: ' + phone + ' - Senha: ' + password);
+                            console.log(value.toString());
                             navigation.navigate('Home') 
                         }  
                         else 
-                            console.log('tem erro')
+                            console.log('erro')
                     }}
                     style={general.button}
                     backgroundDarker={colors.primaryDark}

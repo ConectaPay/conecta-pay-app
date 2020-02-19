@@ -21,7 +21,7 @@ import { colors, general } from '../../styles'
 export default function SignUp( {navigation} ) {
     
     const [ offset ] = useState( new Animated.ValueXY( {x: 75, y: 0} )); //estado inical: x=70
-    const [ logo ] = useState( new Animated.ValueXY( {x: 125, y: 125 } )); //estado inical: x=70
+    const [ logo ] = useState( new Animated.ValueXY( {x: 100, y: 100 } )); //estado inical: x=70
 
     const Form = tForm.form.Form;  //extrair componente form do pacote tcomb
     const formRef = React.createRef(); //referencia do formulario para manipular
@@ -102,7 +102,7 @@ export default function SignUp( {navigation} ) {
     function keyboardDidShow () 
     {
         Animated.timing( logo, {
-            toValue: 70, 
+            toValue: 50, 
             duration: 300
         }).start();
     }
@@ -111,7 +111,7 @@ export default function SignUp( {navigation} ) {
     function keyboardDidHide () 
     {
         Animated.timing( logo, {
-            toValue: 125, 
+            toValue: 100, 
             duration: 300
         }).start();
     }
@@ -120,11 +120,11 @@ export default function SignUp( {navigation} ) {
         <KeyboardAvoidingView style={styles.backgorund}>
             <Animated.Image 
                 style={{ 
-                    marginTop: 35,
+                    marginTop: 50,
                     width: logo.x,
                     height: logo.y
                 }}
-                source={ require('../../assets/icon.png') } 
+                source={ require('../../assets/signup.png') } 
             />
         
             <Animated.View 

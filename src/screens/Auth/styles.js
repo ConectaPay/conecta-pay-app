@@ -5,7 +5,8 @@ const styles = StyleSheet.create({
     backgorund: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: colors.bgColor //#F9F9FA - #F1F3F6
+        backgroundColor: colors.bgColor
+        
     },
     container: {
         width: '100%',

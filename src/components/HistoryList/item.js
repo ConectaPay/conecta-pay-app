@@ -21,7 +21,7 @@ export default class Item extends Component {
         amountFinal = amount * (-1);
     }
 
-    const imageSrc = image ? image : require('../../assets/icon.png');
+    const imageSrc = image ? image : require('../../assets/user.png');
     
     return (
         <View style={styles.containerItem}>
@@ -30,7 +30,7 @@ export default class Item extends Component {
             <View style={styles.itemInfoContainer}>
                 <View style={styles.textContainer}>
                     <Text style={styles.itemTitle}> {name} </Text>
-                    <Text style={[styles.itemTitle, { color: {amountColor} }]}> {amountFinal} </Text>
+                    <Text style={[styles.itemTitle, { color: amountColor }]}> {amountFinal} </Text>
                 </View>
 
                 <View style={styles.textContainer}>

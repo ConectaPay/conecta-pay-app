@@ -3,6 +3,7 @@ import { Text, View, Image } from 'react-native'
 
 import styles from './styles'
 import Item from './item'
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default class index extends Component {
 
@@ -32,30 +33,43 @@ export default class index extends Component {
             {
               id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
               name: 'Edson Paulo',
-              amount: 1200, 
+              amount: 12000, 
               type: 'send', 
               date: '08 Jan',
-              image: require('../../assets/icon.png')
             },
             {
               id: '58694a0f-3da1-471f-bd96-145571e29d72',
               name: 'Ricardo Horta',
               amount: 3000, 
+              type: 'send', 
+              date: '25 Dez',
+            },
+            {
+              id: '58694a0f-3da1-471f-bd96-145571e29d72',
+              name: 'Filipe Fortuna',
+              amount: 10000, 
               type: 'receive', 
-              date: '31 Dez',
+              date: '14 Nov',
+            },
+            {
+              id: '58694a0f-3da1-471f-bd96-145571e29d72',
+              name: 'Roberta Miranda',
+              amount: 9000, 
+              type: 'send', 
+              date: '20 Set',
               image: require('../../assets/splash.png')
             },
             {
               id: '58694a0f-3da1-471f-bd96-145571e29d72',
-              name: 'Ricardo Horta',
-              amount: 3000, 
+              name: 'Hugo Boss',
+              amount: 120500, 
               type: 'receive', 
-              date: '31 Dez',
-              image: require('../../assets/splash.png')
+              date: '12 Ago',
             },
           ];
         return (
             <View style={styles.containerList}>
+              <ScrollView showsVerticalScrollIndicator={false}>
                 
             {
                 transactions.map((item)=>{
@@ -71,7 +85,7 @@ export default class index extends Component {
  
                 })
             }
-               
+               </ScrollView>
                 
             </View>
         )
