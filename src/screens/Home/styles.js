@@ -6,7 +6,7 @@ import { metrics, fonts, colors } from '../../styles'
 
 const styles = StyleSheet.create({
     background: {
-        height: '100%',
+        flex: 1,
         alignItems: 'center',
         backgroundColor: colors.bgColor,
     },

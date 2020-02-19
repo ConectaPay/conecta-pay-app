@@ -14,11 +14,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
         alignItems: 'center'
-
     },
-    itermInfoContainet: {
+    itemInfoContainer: {
+        flexGrow: 1,
+        marginLeft: metrics.baseMargin,
         justifyContent: 'space-between', 
-        width:'85%',
     },
     itemIcon: {
         width: 40,

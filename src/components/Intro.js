@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import AppIntro from 'rn-falcon-app-intro';
 
-import { AccessNavigation } from '../navigations';
+import { AuthNavigation } from '../navigations';
 import { render } from 'react-dom';
 
 
@@ -34,7 +34,7 @@ export default class Intro extends Component {
   render() {
 
     function app() {
-        return ( <AccessNavigation /> )
+        return ( <AuthNavigation /> )
     }
 
     return (

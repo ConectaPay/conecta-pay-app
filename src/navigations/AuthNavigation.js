@@ -2,28 +2,28 @@ import React from 'react';
 import 'react-native-gesture-handler';
 
 import { NavigationContainer} from '@react-navigation/native';
-import { createStackNavigator , TransitionPresets } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import { StyleSheet, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 
 
-import { colors, metrics, fonts } from '../styles';
+import { colors, fonts } from '../styles';
 
 import Welcome from '../screens/Welcome';
-import Login from '../screens/Access/Login';
-import SignUp from '../screens/Access/SignUp';
+import Login from '../screens/Auth/Login';
+import SignUp from '../screens/Auth/SignUp';
 
 import Home from './HomeNavigation';
 
-import { Button, HeaderBar } from '../components';
+import { HeaderBar } from '../components';
 
-export default function AccessNavigation()
+export default function AuthNavigation()
 {  
-  const AccessStack = createStackNavigator();
+  const AuthStack = createStackNavigator();
   
   return(
     <NavigationContainer>
-      <AccessStack.Navigator 
+      <AuthStack.Navigator 
         initialRouteName="Welcome"         
         screenOptions={{
           
@@ -41,13 +41,13 @@ export default function AccessNavigation()
           }
         }}>
 
-        <AccessStack.Screen 
+        <AuthStack.Screen 
           name="Welcome" 
           component={Welcome} 
           options={{ headerShown: false }}
         />
 
-        <AccessStack.Screen 
+        <AuthStack.Screen 
           name="Login" 
           component={Login} 
           options={{
@@ -56,7 +56,7 @@ export default function AccessNavigation()
           }}
         />
 
-        <AccessStack.Screen 
+        <AuthStack.Screen 
           name="SignUp" 
           component={SignUp} 
           options={{
@@ -65,7 +65,7 @@ export default function AccessNavigation()
           }}
         />
 
-        <AccessStack.Screen 
+        <AuthStack.Screen 
           name="Home" 
           component={Home} 
           options={{
@@ -101,7 +101,7 @@ export default function AccessNavigation()
           }}
         />
 
-      </AccessStack.Navigator>
+      </AuthStack.Navigator>
     </NavigationContainer>
   );
 }

@@ -15,6 +15,7 @@ const metrics = {
   statusBarHeight: (Platform.OS === 'ios') ? 20 : 0,
   baseRadius: 5,
   doubleBaseRadius: 10,
+  formInputHeight: 45,
 };
 
 export default metrics;

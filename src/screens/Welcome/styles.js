@@ -5,44 +5,51 @@ import { metrics, fonts, colors } from '../../styles'
 
 const styles = StyleSheet.create({
     background: {
+        backgroundColor: 'white',
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
         padding: metrics.tripleBaseMargin,
     },
-    title: {
-        flex: 0.1,
-        marginTop: metrics.doubleBaseMargin,
+    title1: {
         color: colors.primaryDark,
         fontSize: fonts.big + fonts.big,
         fontWeight: 'bold'
     },
+    title2: {
+        color: colors.grayDark,
+        fontSize: fonts.big + fonts.big,
+        fontWeight: 'bold'
+    },
     slogan: {
-        flex: 0.1,
-        color: colors.primary,
+        color: colors.dark,
         fontSize: fonts.big,
         marginTop: metrics.baseMargin,
     },
     image: {
-        flex: 1,
+        height: 400,
+        alignSelf: 'center',
         width: '100%',
         margin: metrics.tripleBaseMargin,
+        borderRadius: 20,
     },
     topContainer: {
-        flex: 1,
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: metrics.doubleBaseMargin,
+
     },
     bottomContainer: {
-        flex: 0.5,
         width: '100%',
         justifyContent: 'center',
     },
     bottomText: {
         marginTop: metrics.tripleBaseMargin,
         fontSize: fonts.input,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        color: colors.grayDark,
+        
     }
 
 })

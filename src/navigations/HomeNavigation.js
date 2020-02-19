@@ -12,7 +12,7 @@ import History from '../screens/History';
 import Profile from '../screens/Profile';
 import Settings from '../screens/Settings';
 
-import SignUp from '../screens/Access/SignUp';
+import SignUp from '../screens/Auth/SignUp';
 import Home from '../screens/Home';
 
 export default function HomeNavigation() 
@@ -34,10 +34,23 @@ export default function HomeNavigation()
                     iconName = 'qrcode-scan';
                  else if (route.name === 'profile') 
                     iconName = focused ? 'account' : 'account-outline';
+                 else if (route.name === 'settings') 
+                    iconName = focused ? 'plus-circle' : 'plus';
 
                 // You can return any component that you like here!
                 if(route.name === 'settings')
-                    return( <MaterialCommunityIcons name='plus-circle' style={{position: 'absolute', top: -20}} size={60} color={color} /> )
+                    return( <MaterialCommunityIcons 
+                        name={iconName} 
+                        style={{
+                            borderRadius: 55,
+                            alignContent: 'center', 
+                            justifyContent: 'center', 
+                            backgroundColor: 'gray',  
+                            borderWidth: 5,
+                            borderColor: 'white',
+                        }} 
+                        size={60} 
+                        color={colors.primaryDark} /> )
                 else
                     return( <MaterialCommunityIcons name={iconName} size={25} color={color} /> )
             
@@ -57,7 +70,7 @@ export default function HomeNavigation()
 
                 <Tab.Screen name="history" component={History}   options={{ tabBarLabel: 'HISTÓRICO', showLabel: false}} />
                 
-                <Tab.Screen name="settings" component={Settings}  options={{  tabBarLabel: ''}}/>
+                <Tab.Screen name="settings" component={Settings}  options={{  tabBarLabel: '', }}/>
 
                 <Tab.Screen name="qrcode" component={SignUp}  options={{ tabBarLabel: 'QRCODE'}}/>
                 

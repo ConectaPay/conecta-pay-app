@@ -34,32 +34,35 @@ export default function index ({ navigation })
     return (
         <View style={styles.background}>
             <View style={styles.topContainer}>
-                <Text style={styles.title}> Conecta & Paga </Text>
+
+       
+                <View style={{ flexDirection: 'row'}}>
+                    <Text style={styles.title1}>Conecta</Text> 
+                    <Text style={styles.title2}>Pay</Text>
+                </View>
                 <Text style={styles.slogan}> Seus pagamentos na velocidade da luz</Text>
                 <Image style={styles.image} source={ require('../../assets/splash.png') } />
             </View>
 
             <View style={styles.bottomContainer}>
 
-            <Button 
+                <Button 
                     onPress={() => navigation.navigate('Login')}
-                    style={{ height:50, marginBottom: 20}}
+                    style={general.button}
                     backgroundDarker={colors.primaryDark}
                     backgroundColor={colors.primary}
-                    height={50}
-                    borderRadius={5}
+                    height={45}
+                    borderRadius={25}
                     stretch
-                    raiseLevel={5}
-                
+                    raiseLevel={4}
                 > 
                     <LinearGradient 
                         start={[0, 0]}
                         end={[1, 1]}
                         locations={[0.2, 0.9]}
                         colors={[colors.primaryDark, colors.primary]}
-                        style={{width: '100%', height:'100%',justifyContent:'center', alignItems: 'center'}}
+                        style={general.gradientButton}
                     >
-
                         <Text style={{color: 'white'}}>ENTRAR NA CONTA</Text>
 
                     </LinearGradient>
@@ -68,25 +71,18 @@ export default function index ({ navigation })
 
                 <Button 
                     onPress={() => navigation.navigate('SignUp')}
-                    style={{ height:50}}
+                    style={general.button}
                     backgroundDarker={colors.grayLight}
-                    backgroundColor={colors.primary}
-                    height={50}
-                    borderRadius={5}
+                    backgroundColor={colors.white}
+                    borderWidth={1}
+                    borderColor={colors.grayLight}
+                    height={45}
+                    borderRadius={25}
                     stretch
-                    raiseLevel={3}
+                    raiseLevel={4}
                 > 
-                    <LinearGradient 
-                        start={[0, 0]}
-                        end={[1, 1]}
-                        locations={[0.2, 0.9]}
-                        colors={[colors.white, colors.white]}
-                        style={{width: '100%', height:'100%',justifyContent:'center', alignItems: 'center'}}
-                    >
+                    <Text style={{color: 'black'}}>CRIAR NOVA CONTA</Text>
 
-                        <Text style={{color: 'black'}}>CRIAR NOVA CONTA</Text>
-
-                    </LinearGradient>
                 </Button>
 
             

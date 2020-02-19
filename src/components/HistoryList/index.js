@@ -23,7 +23,7 @@ export default class index extends Component {
         const transactions = [
             {
               id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-              entity: 'Paloma Gabriela',
+              name: 'Paloma Gabriela',
               amount: 400, 
               type: 'receive', 
               date: '12 Jan',
@@ -31,7 +31,7 @@ export default class index extends Component {
             },
             {
               id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-              entity: 'Edson Paulo',
+              name: 'Edson Paulo',
               amount: 1200, 
               type: 'send', 
               date: '08 Jan',
@@ -39,7 +39,15 @@ export default class index extends Component {
             },
             {
               id: '58694a0f-3da1-471f-bd96-145571e29d72',
-              entity: 'Ricardo Horta',
+              name: 'Ricardo Horta',
+              amount: 3000, 
+              type: 'receive', 
+              date: '31 Dez',
+              image: require('../../assets/splash.png')
+            },
+            {
+              id: '58694a0f-3da1-471f-bd96-145571e29d72',
+              name: 'Ricardo Horta',
               amount: 3000, 
               type: 'receive', 
               date: '31 Dez',
@@ -48,14 +56,13 @@ export default class index extends Component {
           ];
         return (
             <View style={styles.containerList}>
-            {
-
                 
+            {
                 transactions.map((item)=>{
 
                     return(
                         <Item 
-                            entity={ item.entity } 
+                            name={ item.name } 
                             amount={ item.amount } 
                             type={ item.type } 
                             date={ item.date } 

@@ -12,9 +12,11 @@ const styles = StyleSheet.create({
         padding: metrics.tripleBaseMargin,
     },
     bottomText: {
-        marginTop: metrics.tripleBaseMargin,
+        marginTop: metrics.doubleBaseMargin,
         alignSelf: 'center', 
-        fontSize: fonts.big
+        fontSize: fonts.big,
+        fontWeight: '600',
+        flexDirection: 'row'
     },
 })
 

@@ -6,17 +6,17 @@ import { View , Text, Image} from 'react-native';
 
 export default class Item extends Component {
   render() {
-    const {entity, amount, type, date, image} = this.props;
+    const {name, amount, type, date, image} = this.props;
     let description, amountFinal, amountColor='';
 
     if(type === 'receive')
     {
-        description = 'Recebeu de '+ {entity};
+        description = 'Recebeu de '+ name;
         amountColor = 'green';
         amountFinal = amount;
     }
     else {
-        description = 'Enviou a '+ {entity};
+        description = 'Enviou a '+ name;
         amountColor = 'red';
         amountFinal = amount * (-1);
     }
@@ -26,9 +26,10 @@ export default class Item extends Component {
     return (
         <View style={styles.containerItem}>
             <Image style={styles.itemIcon}  source={imageSrc} />
+            
             <View style={styles.itemInfoContainer}>
                 <View style={styles.textContainer}>
-                    <Text style={styles.itemTitle}> {entity} </Text>
+                    <Text style={styles.itemTitle}> {name} </Text>
                     <Text style={[styles.itemTitle, { color: {amountColor} }]}> {amountFinal} </Text>
                 </View>
 

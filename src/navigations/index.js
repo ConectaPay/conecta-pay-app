@@ -1,4 +1,4 @@
-import AccessNavigation from './AccessNavigation';
+import AuthNavigation from './AuthNavigation';
 import HomeNavigation from './HomeNavigation';
 
-export { AccessNavigation, HomeNavigation };
+export { AuthNavigation, HomeNavigation };

@@ -1,0 +1,10 @@
+{
+    "workbench.enableExperiments": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "npm.fetchOnlinePackageInfo": false,
+    "html.autoClosingTags": false,
+    "php.suggest.basic": false,
+    "php.validate.enable": false
+}
