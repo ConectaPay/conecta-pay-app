@@ -4,7 +4,7 @@ import { metrics, fonts, colors } from '../../constants';
 const styles = StyleSheet.create({
     containerList: { 
         width: '100%',
-        paddingBottom: metrics.baseMargin
+        paddingBottom: metrics.doubleBaseMargin
     },
 
     containerItem: {

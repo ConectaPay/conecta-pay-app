@@ -32,13 +32,13 @@ export default class index extends Component {
             <ScrollView style={styles.containerList}
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
-                <TouchableOpacity>
+                <TouchableOpacity >
                   <Item name='Novo' image={require('../../assets/add.png')}/>
                 </TouchableOpacity>
               {
               contacts.map((item)=>{
                   return(
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=> {alert('Enviou para '+ item.id)}}>
                       <Item name={ item.name.slice(0, item.name.indexOf(' ')) } image={item.image} />
                     </TouchableOpacity>
                   )

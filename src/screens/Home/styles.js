@@ -1,8 +1,6 @@
 import { StyleSheet} from 'react-native'
 
-
 import { metrics, fonts, colors } from '../../constants'
-
 
 const styles = StyleSheet.create({
     background: {
@@ -12,89 +10,97 @@ const styles = StyleSheet.create({
     },
     topContainer: {
         width: '100%',
-        height: 100,
-        marginBottom: 50
+        height: 115,
+        marginBottom: 35
     },
     card: {
+        flex: 1,
+        zIndex: 1,
         width: '90%',
         alignSelf: 'center',
         position: 'absolute',
-        height: 155,
-        backgroundColor: colors.white,
-        zIndex: 1,
+        backgroundColor: colors.primaryLight,
+        marginTop: metrics.baseMargin,
+        marginHorizontal: metrics.baseMargin,
+        padding: metrics.doubleBaseMargin,
+        borderTopLeftRadius: 85,
+        borderTopRightRadius: 85,
+        borderBottomLeftRadius: 5,
+        borderBottomRightRadius: 5,
     },
     amountBig: {
         fontWeight: 'bold',
-        fontSize: 28,
+        fontSize: fonts.big,
         color: colors.primaryDark,
-        marginLeft: 10,
     },
     amountDescription: {
+        fontSize: fonts.medium,
         color: colors.grayDark,
-        marginLeft: 10,
-
-    },
-    buttons: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: metrics.doubleBaseMargin,
     },
     divider: {
-        height: 50,
+        height: 30,
         width: 1,
+        elevation: 1,
         backgroundColor: colors.grayLight,
+        marginHorizontal:  metrics.baseMargin,
     },
-    btn: {
-        width: 65,
-        backgroundColor: colors.white,
-        borderRadius: metrics.doubleBaseRadius,
-        padding: metrics.baseMargin,
+    rowContainer: {
+        flex: 1, 
+        flexDirection: 'row',
+        justifyContent:'space-between'
+    },
+    btnContainer: {
+        flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        marginRight:  metrics.baseMargin,
-        marginLeft: metrics.baseMargin,
-        elevation: 4,
     },
     btnIcon: {
         color: colors.primaryDark,
         fontSize: fonts.big,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginBottom: 3,
     },
     btnText: {
         color: colors.primaryDark,
         fontSize: fonts.small,
         fontWeight: 'bold',
-        marginTop: 4,
     },
 
     content: {
-        padding: metrics.doubleBaseMargin,
+        flex: 1,
         width: '100%',
+        padding: metrics.doubleBaseMargin,
+        backgroundColor: 'transparent',
     },
+
     sendToContainerHeader: {
+        marginVertical: metrics.baseMargin,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-
     sendToContainer: {
+        flex: 2,
         width: '100%',
-        height: 130,
-        padding: 2,
+        paddingHorizontal: metrics.smallMargin,
+        backgroundColor: 'transparent'
     },
 
     historyContainer: {
+        flex: 3.5,
         width: '100%',
         padding: metrics.doubleBaseMargin,
-        elevation: 4,
-        height: 310,
+        elevation: 3,
         borderRadius: 15,
         backgroundColor: 'white',
         marginTop: metrics.baseMargin,
+        backgroundColor: 'white'
     },
     historyTitle: {
         fontSize: fonts.medium,
         fontWeight: 'bold',
-        marginBottom: metrics.smallMargin,
+        paddingBottom: metrics.baseMargin,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.grayLight,
     }
 
    

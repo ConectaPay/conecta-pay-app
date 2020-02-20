@@ -19,12 +19,9 @@ export default function HeaderBar () {
 
             <View style={styles.firstBar}>
                 <TouchableNativeFeedback background={TouchableNativeFeedback.SelectableBackground()}>
-                
-                    <MaterialCommunityIcons name='menu' style={styles.firstBarChild}/>
+                    <MaterialCommunityIcons name='text' style={styles.firstBarChild}/>
                 </TouchableNativeFeedback>
-                   
                
-
                 <Text style={styles.firstBarChild}>CONECTA</Text>
 
                 <MaterialCommunityIcons name='bell' style={styles.firstBarChild} />
@@ -36,6 +33,7 @@ export default function HeaderBar () {
 
 const styles = StyleSheet.create({
     container: {
+        height: 20,
         padding: metrics.doubleBaseMargin,
         paddingTop: StatusBar.currentHeight + metrics.doubleBaseMargin,
     },
@@ -46,7 +44,7 @@ const styles = StyleSheet.create({
     },
     firstBarChild: {
         color: 'white',
-        fontSize: fonts.big,
+        fontSize: 22,
         fontWeight: 'bold',
     },
 })

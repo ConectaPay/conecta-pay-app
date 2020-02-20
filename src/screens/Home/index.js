@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text,StatusBar, TouchableOpacity, ScrollView} from 'react-native';
-import { TouchableHighlight } from 'react-native-gesture-handler';
+import { View, Text,StatusBar, TouchableNativeFeedback, TouchableOpacity, ScrollView} from 'react-native';
+import { TouchableHighlight,  } from 'react-native-gesture-handler';
 import  styles from './styles';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -28,33 +28,47 @@ export default function Home() {
 
       <View style={[general.card , styles.card ]}>
                 
-        <Text style={styles.amountBig}>450,330.00</Text>
-        <Text style={styles.amountDescription}>Saldo Disponível (KZ)</Text>
+          <View style={[styles.btnContainer, {marginBottom: 25, backgroundColor: 'transparent'}]}>
+            <Text style={styles.amountBig}> 
+              <Icon name='cash' style={styles.btnIcon}/> 
+                450.330,00 
+              <Icon name='cash' style={styles.btnIcon}/> 
+            </Text>
+            <Text style={styles.amountDescription}>Saldo Disponível (KZ)</Text>
+          </View>
+        
+       
+        <View style={styles.rowContainer}>
 
-          <View style={styles.buttons}>
-                    
-            <View style={styles.btn}>
+        <TouchableNativeFeedback background={TouchableNativeFeedback.SelectableBackground()}>
+          <View style={[styles.btnContainer, {backgroundColor: 'transparent'}]}>
+            <View style={styles.btnContainer}>
               <Icon name='transfer-up' style={styles.btnIcon} />
-              <Text style={styles.btnText} >Enviar</Text>
+              <Text style={styles.btnText}> ENVIAR </Text>
             </View>
+          </View>
+          </TouchableNativeFeedback>
 
-            <View style={styles.btn}>
-              <Icon name='transfer-down' style={styles.btnIcon} />
-              <Text style={styles.btnText} >Receber</Text>
-            </View>
+          <View style={styles.divider}/>
 
-            <View style={styles.divider} />
-                    
-            <View style={styles.btn}>
-              <Icon name='qrcode' style={styles.btnIcon} />
-              <Text style={styles.btnText}>QRCode</Text>
+          <View style={[styles.btnContainer, {backgroundColor: 'transparent'}]}>
+            <View style={styles.btnContainer}>
+              <Icon name='qrcode-scan' style={styles.btnIcon} />
+              <Text style={styles.btnText}> SCANEAR </Text>
             </View>
+          </View>
 
-            <View style={styles.btn}>
-              <Icon name='plus-circle' style={styles.btnIcon} />
-              <Text style={styles.btnText}>ADD</Text>
+          <View style={styles.divider}/>
+
+          <View style={[styles.btnContainer, {backgroundColor: 'transparent'}]}>
+            <View style={styles.btnContainer}>
+              <Icon name='transfer-down' style={styles.btnIcon} /> 
+              <Text style={styles.btnText}> RECEBER </Text>
             </View>
+          </View>
+
         </View>
+
       </View>
 
     <View style={styles.content}>
