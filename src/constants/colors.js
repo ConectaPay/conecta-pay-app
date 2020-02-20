@@ -3,17 +3,17 @@ const colors = {
     bgColor: '#F1F3F6',
     bgColor: '#ECEFF1',
     
-    primaryDark: '#512DA8',
-    primary: '#5E35D1',
-    primaryLight: '#D1C4E9', 
-
+    
+    
     primaryDark: '#5A30BA',
     primary: '#7C42FF',
     primaryLight: '#ECEFF1',
+
     
     primaryDark: '#37474F',
     primary: '#455A64',
     primaryLight: '#ECEFF1', 
+
 
     gradientLeft: '#7C42FF',
     gradientCenter: '#5A30BA',

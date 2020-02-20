@@ -5,7 +5,7 @@ import {MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { colors, metrics, fonts, general } from '../styles'
+import { colors, metrics, fonts, general } from '../constants'
 
 export default function HeaderBar () {
     

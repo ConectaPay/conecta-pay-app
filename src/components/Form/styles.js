@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { colors, fonts, metrics } from '../../styles';
+import { colors, fonts, metrics } from '../../constants';
 
 const inputModeStyles = {
    

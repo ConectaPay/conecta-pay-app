@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import AwesomeButton from "react-native-really-awesome-button";
 
 import styles from './styles'
-import { colors } from '../../styles';
+import { colors } from '../../constants';
 
 export default class index extends Component {
     render() {

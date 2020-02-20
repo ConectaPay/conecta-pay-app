@@ -15,7 +15,7 @@ import Button from "react-native-really-awesome-button";
 import {InputTemplate} from '../../components'
 
 import styles from './styles'
-import { colors, general } from '../../styles'
+import { colors, general } from '../../constants'
 
 
 export default function SignUp( {navigation} ) {

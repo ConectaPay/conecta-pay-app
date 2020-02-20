@@ -3,7 +3,7 @@ import { Text, View, Image } from 'react-native'
 
 import styles from './styles'
 import Item from './item'
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class index extends Component {
 
@@ -75,12 +75,14 @@ export default class index extends Component {
                 transactions.map((item)=>{
 
                     return(
+                      <TouchableOpacity> 
                         <Item 
                             name={ item.name } 
                             amount={ item.amount } 
                             type={ item.type } 
                             date={ item.date } 
                             image={ item.image } />
+                            </TouchableOpacity>
                     )
  
                 })

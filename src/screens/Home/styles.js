@@ -1,7 +1,7 @@
 import { StyleSheet} from 'react-native'
 
 
-import { metrics, fonts, colors } from '../../styles'
+import { metrics, fonts, colors } from '../../constants'
 
 
 const styles = StyleSheet.create({
@@ -78,11 +78,8 @@ const styles = StyleSheet.create({
 
     sendToContainer: {
         width: '100%',
-        padding: metrics.baseMargin,
-        elevation: 4,
-        height: 150,
-        borderRadius: 15,
-        backgroundColor: 'white',
+        height: 130,
+        padding: 2,
     },
 
     historyContainer: {

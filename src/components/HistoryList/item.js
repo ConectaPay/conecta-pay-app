@@ -21,6 +21,7 @@ export default class Item extends Component {
         amountFinal = amount * (-1);
     }
 
+
     const imageSrc = image ? image : require('../../assets/user.png');
     
     return (

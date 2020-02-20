@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { colors, metrics, fonts, general } from '../../styles'
+import { colors, general } from '../../constants'
 
 import {  SendToList, HistoryList } from '../../components'
 

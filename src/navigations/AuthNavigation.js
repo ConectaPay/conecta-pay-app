@@ -7,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'react-native';
 
 
-import { colors, fonts } from '../styles';
+import { colors, fonts } from '../constants';
 
 import Welcome from '../screens/Welcome';
 import Login from '../screens/Auth/Login';
