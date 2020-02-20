@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     slogan: {
-        color: colors.dark,
-        fontSize: fonts.big,
+        color: colors.grayDark,
+        fontSize: fonts.input,
         marginTop: metrics.baseMargin,
     },
     image: {

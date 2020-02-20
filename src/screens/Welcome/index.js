@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Text, View, Image, Animated} from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { colors, metrics, fonts, general } from '../../constants'
+import { colors, general } from '../../constants'
 
 import Button from "react-native-really-awesome-button";
 

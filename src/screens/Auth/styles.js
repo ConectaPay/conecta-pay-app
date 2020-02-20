@@ -15,9 +15,9 @@ const styles = StyleSheet.create({
     bottomText: {
         marginTop: metrics.doubleBaseMargin,
         alignSelf: 'center', 
-        fontSize: fonts.big,
-        fontWeight: '600',
-        flexDirection: 'row'
+        fontSize: fonts.input,
+        flexDirection: 'row',
+        color: colors.dark
     },
 })
 

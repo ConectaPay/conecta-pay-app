@@ -41,11 +41,12 @@ const styles = StyleSheet.create({
     },
     firstBar: {
         flexDirection: 'row',
+        alignItems: 'center',
         justifyContent: 'space-between',
     },
     firstBarChild: {
         color: 'white',
-        fontSize: fonts.bigger,
+        fontSize: fonts.big,
         fontWeight: 'bold',
     },
 })

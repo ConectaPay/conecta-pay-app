@@ -36,7 +36,7 @@ export default function AuthNavigation()
           headerStatusBarHeight: StatusBar.currentHeight,
           headerTintColor: colors.white,
           headerTitleStyle: {
-            fontSize: fonts.bigger,
+            fontSize: fonts.input,
             fontWeight: 'bold',
           }
         }}>
@@ -51,7 +51,7 @@ export default function AuthNavigation()
           name="Login" 
           component={Login} 
           options={{
-            title: 'FAZER LOGIN',
+            title: 'ENTRAR NA CONTA',
             animationEnabled: false,
           }}
         />
@@ -60,7 +60,7 @@ export default function AuthNavigation()
           name="SignUp" 
           component={SignUp} 
           options={{
-            title: 'CRIAR CONTA',
+            title: 'CRIAR NOVA CONTA',
             animationEnabled: false,
           }}
         />
