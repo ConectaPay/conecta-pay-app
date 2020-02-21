@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, TouchableNativeFeedback, TouchableHighlight, TouchableOpacity} from 'react-native';
+import {  View, Text, TouchableNativeFeedback, TouchableHighlight, TouchableOpacity} from 'react-native';
+import { useFocusEffect } from '@react-navigation/native'
 
 import  styles from './styles';
 
@@ -10,18 +11,20 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { colors, general } from '../../constants'
 
 import {  SendToList, HistoryList } from '../../components'
+import HomeDrawerNavigation from '../../navigations/HomeDrawerNavigation';
 
 export default function Home() {
   
+  ScreenWithCustomBackBehavior();
+
   return (
     <View style={styles.background}>
       
       <LinearGradient style={styles.topContainer}
-            start={[0, 0]}
-            end={[1, 1]}
-            locations={[0.2, 0.9]}
-            colors={[colors.primaryDark, colors.primary]}
-        >
+        start={[0, 0]}
+        end={[1, 1]}
+        locations={[0.2, 0.9]}
+        colors={[colors.primaryDark, colors.primary]} >
           <View/>
       </LinearGradient>
 
@@ -90,4 +93,28 @@ export default function Home() {
   </View>
 
   );
+
+  function ScreenWithCustomBackBehavior() {
+    // ...
+  /** *
+    useFocusEffect(
+      React.useCallback(() => {
+        const onBackPress = () => {
+          if (isSelectionModeEnabled()) {
+            disableSelectionMode();
+            return true;
+          } else {
+            return false;
+          }
+        };
+  
+        BackHandler.addEventListener('hardwareBackPress', onBackPress);
+  
+        return () =>
+          BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+      }, [isSelectionModeEnabled, disableSelectionMode])
+    );
+  
+    // ...*/
+  }
 }

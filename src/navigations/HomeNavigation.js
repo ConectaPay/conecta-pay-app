@@ -1,25 +1,27 @@
 import React from 'react';
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import {HomeTabBar} from '../components'
+import { HeaderBar } from '../components';
 
+import Home from '../screens/Home';
 import History from '../screens/History';
 import Profile from '../screens/Profile';
 import Settings from '../screens/Settings';
 
-import SignUp from '../screens/Auth/SignUp';
-import Home from '../screens/Home';
 
-export default function HomeNavigation() 
+function HomeNavigation() 
 {
     const Tab = createBottomTabNavigator();
-       
     return(
+
         <Tab.Navigator 
             initialRouteName='home'
+            animationEnabled={true}
             tabBar={ props => <HomeTabBar {...props} /> }
-            screenOptions={({ route }) => ({})}>
+            screenOptions={ ({ route }) => ({})}>
+
             <Tab.Screen name="home" component={Home} options={{ tabBarLabel: 'INÍCIO'}} />
 
             <Tab.Screen name="settings" component={Settings}  options={{ tabBarLabel: 'CARREGAR', }}/>
@@ -31,5 +33,23 @@ export default function HomeNavigation()
         </Tab.Navigator>
     )
 }
+    
+function HomeStackNavigator()
+{  
+  const HomeStackNavigator = createStackNavigator();
+  return(
+      <HomeStackNavigator.Navigator      
+        screenOptions={{
+            header: ({ navigation }) => {
+                return ( <HeaderBar navigation={navigation} /> );
+            }
+        }}>
+
+        <HomeStackNavigator.Screen name="Home" component={HomeNavigation} />
+
+      </HomeStackNavigator.Navigator>
+  );
+}
 
  
+export default HomeStackNavigator;

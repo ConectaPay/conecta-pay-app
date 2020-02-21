@@ -13,9 +13,7 @@ import Welcome from '../screens/Welcome';
 import Login from '../screens/Auth/Login';
 import SignUp from '../screens/Auth/SignUp';
 
-import Home from './HomeNavigation';
-
-import { HeaderBar } from '../components';
+import HomeDrawerNavigation from './HomeDrawerNavigation';
 
 export default function AuthNavigation()
 {  
@@ -67,38 +65,8 @@ export default function AuthNavigation()
 
         <AuthStack.Screen 
           name="Home" 
-          component={Home} 
-          options={{
-            headerShown: true,
-            safeAreaInsets: {
-              bottom: 0,
-              top: StatusBar.currentHeight,
-            },
-            title: 'CONECTA PAY',
-            headerStyle: {
-              height: 200, 
-              backgroundColor: colors.primaryDark
-            },
-              
-            header: ({ scene, previous, navigation }) => {
-              const { options } = scene.descriptor;
-              const title =
-                options.headerTitle !== undefined
-                  ? options.headerTitle
-                  : options.title !== undefined
-                  ? options.title
-                  : scene.route.name;
-            
-              return (
-                <HeaderBar
-                  title={title}
-                  
-                />
-              );
-            }
-
-
-          }}
+          component={HomeDrawerNavigation} 
+          options={{ headerShown: false}}
         />
 
       </AuthStack.Navigator>

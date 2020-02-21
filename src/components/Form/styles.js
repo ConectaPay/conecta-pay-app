@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     inputIcon: { 
+        fontSize: 20,
         marginRight: metrics.baseMargin 
     }
 });

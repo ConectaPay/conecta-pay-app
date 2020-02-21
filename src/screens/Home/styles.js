@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         width: '90%',
         alignSelf: 'center',
         position: 'absolute',
-        backgroundColor: colors.primaryLight,
+        backgroundColor: colors.white,
         marginHorizontal: metrics.baseMargin,
         padding: metrics.doubleBaseMargin,
         borderTopLeftRadius: 55,

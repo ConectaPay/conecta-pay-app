@@ -7,7 +7,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { colors, metrics, fonts, general } from '../constants'
 
-export default function HeaderBar () {
+export default class  HeaderBar extends React.Component {
+    render() {
+
+      const {navigation} = this.props;
     
     return (
         <LinearGradient style={styles.container}
@@ -18,7 +21,7 @@ export default function HeaderBar () {
         >
 
             <View style={styles.firstBar}>
-                <TouchableOpacity background={TouchableNativeFeedback.Ripple('red')}>
+                <TouchableOpacity background={TouchableNativeFeedback.Ripple('red')} onPress={()=>navigation.openDrawer() }>
                     <MaterialCommunityIcons size={30} name='text' style={styles.firstBarChild}/>
                 </TouchableOpacity>
                
@@ -35,11 +38,13 @@ export default function HeaderBar () {
         </LinearGradient>
     )
 }
+}
+
 
 const styles = StyleSheet.create({
     container: {
-        padding: metrics.doubleBaseMargin,
-        paddingTop: StatusBar.currentHeight + metrics.doubleBaseMargin,  
+        padding: metrics.baseMargin,
+        paddingTop: StatusBar.currentHeight + metrics.baseMargin,  
     },
     firstBar: {
         flexDirection: 'row',
@@ -60,4 +65,5 @@ const styles = StyleSheet.create({
         backgroundColor: colors.alert,
         zIndex: 1,
     }
-})
+});
+
