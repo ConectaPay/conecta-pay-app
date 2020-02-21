@@ -16,10 +16,10 @@ const general = {
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
-    elevation: 5,
+    elevation: 4,
   },
   button: {
-    height: 45, 
+    height: metrics.formInputHeight, 
     marginBottom: metrics.baseMargin,
     marginTop: metrics.baseMargin,
   },

@@ -8,16 +8,16 @@ const styles = StyleSheet.create({
     },
 
     containerItem: {
-        borderRadius: 10,
+        borderRadius: metrics.doubleBaseRadius,
         width: 80,
         height: 100,
         backgroundColor: 'white',
-        marginRight: 10,
+        marginHorizontal: metrics.smallMargin,
         alignItems: 'center',
     },
     itemAvater: {
-        marginTop: 20,
-        marginBottom: 10,
+        marginTop: metrics.doubleBaseMargin,
+        marginBottom: metrics.baseMargin,
         width: 40,
         height: 40,
         borderRadius: 25,

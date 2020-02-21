@@ -16,7 +16,7 @@ import Button from "react-native-really-awesome-button";
 import {InputTemplate} from '../../components'
 
 import styles from './styles'
-import { colors, general } from '../../constants'
+import { colors, general, metrics } from '../../constants'
 
 
 export default function Login( {navigation} ) 
@@ -139,8 +139,8 @@ export default function Login( {navigation} )
                     style={general.button}
                     backgroundDarker={colors.primaryDark}
                     backgroundColor={colors.primary}
-                    height={45}
-                    borderRadius={15}
+                    height={metrics.formInputHeight}
+                    borderRadius={metrics.formInputRadius}
                     stretch
                     raiseLevel={4}
                 > 

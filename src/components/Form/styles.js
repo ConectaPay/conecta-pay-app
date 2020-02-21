@@ -11,8 +11,8 @@ const inputModeStyles = {
         marginBottom: metrics.baseMargin,
         borderWidth: 1,
         width: '100%',
-        height: 50,
-        borderRadius: 15,
+        height: metrics.formInputHeight,
+        borderRadius: metrics.formInputRadius,
         borderColor: colors.grayLight,
         backgroundColor: '#FEFEFE',
     },
@@ -24,8 +24,8 @@ const inputModeStyles = {
         marginTop: metrics.baseMargin,
         borderWidth: 1,
         width: '100%',
-        height: 50,
-        borderRadius: 15,
+        height: metrics.formInputHeight,
+        borderRadius: metrics.formInputRadius,
         borderColor: 'darkred',
         backgroundColor: '#FEFEFE',
     },
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     inputIcon: { 
-        fontSize: 25,
         marginRight: metrics.baseMargin 
     }
 });

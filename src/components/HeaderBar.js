@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View ,StatusBar, Image, TouchableNativeFeedback, TouchableOpacity } from 'react-native'
+import React  from 'react'
+import { Text, StyleSheet, View ,StatusBar, TouchableNativeFeedback, TouchableOpacity } from 'react-native'
 import {MaterialCommunityIcons } from '@expo/vector-icons';
 
 
@@ -18,13 +18,18 @@ export default function HeaderBar () {
         >
 
             <View style={styles.firstBar}>
-                <TouchableNativeFeedback background={TouchableNativeFeedback.SelectableBackground()}>
-                    <MaterialCommunityIcons name='text' style={styles.firstBarChild}/>
-                </TouchableNativeFeedback>
+                <TouchableOpacity background={TouchableNativeFeedback.Ripple('red')}>
+                    <MaterialCommunityIcons size={30} name='text' style={styles.firstBarChild}/>
+                </TouchableOpacity>
                
-                <Text style={styles.firstBarChild}>CONECTA</Text>
+                <Text style={[styles.firstBarChild, {fontSize: 23}]}>CONECTA</Text>
 
-                <MaterialCommunityIcons name='bell' style={styles.firstBarChild} />
+
+                <TouchableOpacity>
+                    <View style={styles.notificationBadge} />
+                    <MaterialCommunityIcons size={30} name='bell' style={styles.firstBarChild} />
+                </TouchableOpacity>
+
             </View>
             
         </LinearGradient>
@@ -33,9 +38,8 @@ export default function HeaderBar () {
 
 const styles = StyleSheet.create({
     container: {
-        height: 20,
         padding: metrics.doubleBaseMargin,
-        paddingTop: StatusBar.currentHeight + metrics.doubleBaseMargin,
+        paddingTop: StatusBar.currentHeight + metrics.doubleBaseMargin,  
     },
     firstBar: {
         flexDirection: 'row',
@@ -43,8 +47,17 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     firstBarChild: {
-        color: 'white',
-        fontSize: 22,
+        color: colors.light,
         fontWeight: 'bold',
     },
+    notificationBadge: {
+        position: 'absolute',
+        top: 4,
+        right: 4,
+        width: 10,
+        height: 10,
+        borderRadius: 20,
+        backgroundColor: colors.alert,
+        zIndex: 1,
+    }
 })

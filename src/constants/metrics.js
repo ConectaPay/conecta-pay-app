@@ -16,6 +16,7 @@ const metrics = {
   baseRadius: 5,
   doubleBaseRadius: 10,
   formInputHeight: 45,
+  formInputRadius: 25,
 };
 
 export default metrics;

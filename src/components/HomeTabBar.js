@@ -13,14 +13,14 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
           { 
               flexDirection: 'row', 
               height: 60, 
-              backgroundColor: colors.primaryDark, 
+              backgroundColor: colors.primary, 
               alignItems: 'center', 
               justifyContent: 'space-between',
-              paddingTop: 5,
-              paddingBottom: 5,
-              paddingLeft: 5,
-              paddingRight: 15,
-              borderTopRightRadius: 35,
+              paddingVertical: 5,
+              paddingHorizontal: metrics.baseMargin,
+
+              borderTopLeftRadius: 0,
+              borderTopRightRadius: 0,
           }
       }>
   
@@ -57,15 +57,15 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
           let iconName;
 
           if (route.name === 'home') 
-              iconName = isFocused ? 'home' : 'home-outline';
+              iconName = 'home';
            else if (route.name === 'history') 
               iconName = 'history';
            else if (route.name === 'qrcode') 
               iconName = 'qrcode';
            else if (route.name === 'profile') 
-              iconName = isFocused ? 'account' : 'account-outline';
+              iconName = 'account';
            else if (route.name === 'settings') 
-              iconName = 'plus-circle';
+              iconName = 'wallet';
 
          
           return (
@@ -78,23 +78,26 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
               onLongPress={onLongPress}
             >
               <View style={{ 
-                backgroundColor: isFocused ? colors.grayLight: 'transparent', 
-                flexDirection: 'row', 
+                padding: 5,
+
+                flexDirection:   'row', 
                 alignItems: 'center', 
                 justifyContent: 'center',
-                borderTopLeftRadius: 15,
-                borderTopRightRadius: 15,
-                borderBottomLeftRadius: 15 ,
-                borderBottomRightRadius: 15,
-                paddingRight: 5 ,
-                paddingLeft: 5 ,
-                width: isFocused  ? 100 : 50,
+                width: isFocused  ? 110 : 70,
+
+                borderTopRightRadius: route.name === 'profile' ? 5 : 25,
+                borderBottomRightRadius: route.name === 'profile' ? 5 : 25,
+
+                borderTopLeftRadius: route.name === 'home' ? 5 : 25,
+                borderBottomLeftRadius: route.name === 'home' ? 5 : 25,
+
+                backgroundColor: isFocused ? colors.grayLight: 'transparent', 
               }}>
 
                   
-                <MaterialCommunityIcons name={iconName} style={{ color: isFocused ? colors.primaryDark : 'white' }} size={35} />
-                  
-                <Text style={{fontSize: 10, color: isFocused ? colors.primaryDark : 'white' }}> { isFocused ? label : null} </Text>
+                <MaterialCommunityIcons name={iconName} style={{ color: isFocused ? colors.primaryDark : colors.grayLight }} size={30} />
+               
+                <Text style={{fontSize: 10, marginHorizontal: 2, color: isFocused ? colors.primaryDark : colors.grayLight }}> { isFocused ? label : null} </Text>
 
               </View>
              

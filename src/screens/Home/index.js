@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text,StatusBar, TouchableNativeFeedback, TouchableOpacity, ScrollView} from 'react-native';
-import { TouchableHighlight,  } from 'react-native-gesture-handler';
+import { View, Text, TouchableNativeFeedback, TouchableHighlight, TouchableOpacity} from 'react-native';
+
 import  styles from './styles';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -28,61 +28,57 @@ export default function Home() {
 
       <View style={[general.card , styles.card ]}>
                 
-          <View style={[styles.btnContainer, {marginBottom: 25, backgroundColor: 'transparent'}]}>
-            <Text style={styles.amountBig}> 
-              <Icon name='cash' style={styles.btnIcon}/> 
-                450.330,00 
-              <Icon name='cash' style={styles.btnIcon}/> 
-            </Text>
-            <Text style={styles.amountDescription}>Saldo Disponível (KZ)</Text>
-          </View>
-        
+        <View style={[styles.btnContainer, {marginBottom: 25, backgroundColor: 'transparent'}]}>
+          <Text style={styles.amountBig}> 
+            <Icon name='cash' style={styles.btnIcon}/> 
+              450.330,00 
+            <Icon name='cash' style={styles.btnIcon}/> 
+          </Text>
+          <Text style={styles.amountDescription}>Saldo Disponível (KZ)</Text>
+        </View>
        
         <View style={styles.rowContainer}>
 
-        <TouchableNativeFeedback background={TouchableNativeFeedback.SelectableBackground()}>
-          <View style={[styles.btnContainer, {backgroundColor: 'transparent'}]}>
+          <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple(colors.primary)}>
             <View style={styles.btnContainer}>
               <Icon name='transfer-up' style={styles.btnIcon} />
               <Text style={styles.btnText}> ENVIAR </Text>
             </View>
-          </View>
           </TouchableNativeFeedback>
 
           <View style={styles.divider}/>
 
-          <View style={[styles.btnContainer, {backgroundColor: 'transparent'}]}>
+          <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple(colors.primary)}>
             <View style={styles.btnContainer}>
               <Icon name='qrcode-scan' style={styles.btnIcon} />
               <Text style={styles.btnText}> SCANEAR </Text>
             </View>
-          </View>
+          </TouchableNativeFeedback>
 
           <View style={styles.divider}/>
 
-          <View style={[styles.btnContainer, {backgroundColor: 'transparent'}]}>
+          <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple(colors.primary)}>
             <View style={styles.btnContainer}>
               <Icon name='transfer-down' style={styles.btnIcon} /> 
               <Text style={styles.btnText}> RECEBER </Text>
             </View>
+          </TouchableNativeFeedback>
+
+        </View>
+      </View>
+
+      <View style={styles.content}>
+      
+        <View style={styles.sendToContainer}>
+          <View style={styles.sendToContainerHeader}>
+            <Text style={{fontSize: 12}}>Enviar dinheiro para:</Text>
+            <TouchableOpacity>
+              <Text style={styles.historyTitle}>VER TODOS</Text>
+            </TouchableOpacity>
           </View>
 
+          <SendToList />
         </View>
-
-      </View>
-
-    <View style={styles.content}>
-      
-      <View style={styles.sendToContainer}>
-        <View style={styles.sendToContainerHeader}>
-          <Text style={{fontSize: 12}}>Enviar dinheiro para:</Text>
-          <TouchableHighlight>
-            <Text style={styles.historyTitle}>VER TODOS</Text>
-          </TouchableHighlight>
-        </View>
-
-        <SendToList />
-      </View>
 
       <View style={styles.historyContainer}>
         <Text style={styles.historyTitle}>ÚLTIMAS TRANSAÇÕES</Text>

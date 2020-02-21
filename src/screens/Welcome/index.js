@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Text, View, Image, Animated} from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { colors, general } from '../../constants'
+import { colors, general, metrics } from '../../constants'
 
 import Button from "react-native-really-awesome-button";
 
@@ -50,8 +50,8 @@ export default function index ({ navigation })
                     style={general.button}
                     backgroundDarker={colors.primaryDark}
                     backgroundColor={colors.primary}
-                    height={45}
-                    borderRadius={25}
+                    height={metrics.formInputHeight}
+                    borderRadius={metrics.formInputRadius}
                     stretch
                     raiseLevel={4}
                 > 
@@ -75,10 +75,10 @@ export default function index ({ navigation })
                     backgroundColor={colors.white}
                     borderWidth={1}
                     borderColor={colors.grayLight}
-                    height={45}
-                    borderRadius={25}
+                    height={metrics.formInputHeight}
+                    borderRadius={metrics.formInputRadius}
                     stretch
-                    raiseLevel={4}
+                    raiseLevel={3}
                 > 
                     <Text style={{color: 'black'}}>CRIAR NOVA CONTA</Text>
 

@@ -20,11 +20,10 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         position: 'absolute',
         backgroundColor: colors.primaryLight,
-        marginTop: metrics.baseMargin,
         marginHorizontal: metrics.baseMargin,
         padding: metrics.doubleBaseMargin,
-        borderTopLeftRadius: 85,
-        borderTopRightRadius: 85,
+        borderTopLeftRadius: 55,
+        borderTopRightRadius: 55,
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
     },
@@ -53,6 +52,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        borderRadius: 10,
+        paddingVertical: 2,
     },
     btnIcon: {
         color: colors.primaryDark,
@@ -70,11 +71,10 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         padding: metrics.doubleBaseMargin,
-        backgroundColor: 'transparent',
     },
 
     sendToContainerHeader: {
-        marginVertical: metrics.baseMargin,
+        marginTop: metrics.baseMargin,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
@@ -82,18 +82,16 @@ const styles = StyleSheet.create({
         flex: 2,
         width: '100%',
         paddingHorizontal: metrics.smallMargin,
-        backgroundColor: 'transparent'
     },
 
     historyContainer: {
         flex: 3.5,
         width: '100%',
         padding: metrics.doubleBaseMargin,
-        elevation: 3,
+        elevation: 2,
         borderRadius: 15,
         backgroundColor: 'white',
         marginTop: metrics.baseMargin,
-        backgroundColor: 'white'
     },
     historyTitle: {
         fontSize: fonts.medium,

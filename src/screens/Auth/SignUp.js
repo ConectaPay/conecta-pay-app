@@ -15,7 +15,7 @@ import Button from "react-native-really-awesome-button";
 import {InputTemplate} from '../../components'
 
 import styles from './styles'
-import { colors, general } from '../../constants'
+import { colors, general, metrics } from '../../constants'
 
 
 export default function SignUp( {navigation} ) {
@@ -53,8 +53,6 @@ export default function SignUp( {navigation} ) {
                 config: { type: 'phone' },
                 template: InputTemplate,
                 returnKeyType: 'next',
-               // onSubmitEditing: (event) => { formRef.current.getComponent('password').refs.input.focus() },
-               //  help: 'Your help message here',
             },
             password: {
                 placeholder: 'Senha',
@@ -140,8 +138,8 @@ export default function SignUp( {navigation} ) {
                     style={general.button}
                     backgroundDarker={colors.primaryDark}
                     backgroundColor={colors.primary}
-                    height={45}
-                    borderRadius={25}
+                    height={metrics.formInputHeight}
+                    borderRadius={metrics.formInputRadius}
                     stretch
                     raiseLevel={4}
                 > 
