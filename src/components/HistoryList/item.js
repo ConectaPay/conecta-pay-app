@@ -31,7 +31,7 @@ export default class Item extends Component {
             <View style={styles.itemInfoContainer}>
                 <View style={styles.textContainer}>
                     <Text style={styles.itemTitle}> {name} </Text>
-                    <Text style={[styles.itemTitle, { color: amountColor }]}> {amountFinal} </Text>
+                    <Text style={[styles.itemTitle, { color: amountColor }]}> {amountFinal+' Kz'} </Text>
                 </View>
 
                 <View style={styles.textContainer}>

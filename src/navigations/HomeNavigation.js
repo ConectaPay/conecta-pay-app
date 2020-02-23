@@ -15,7 +15,6 @@ function HomeNavigation()
 {
     const Tab = createBottomTabNavigator();
     return(
-
         <Tab.Navigator 
             initialRouteName='home'
             animationEnabled={true}

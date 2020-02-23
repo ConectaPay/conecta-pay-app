@@ -13,29 +13,24 @@ export default class  HeaderBar extends React.Component {
       const {navigation} = this.props;
     
     return (
-        <LinearGradient style={styles.container}
-            start={[0, 0]}
-            end={[1, 1]}
-            locations={[0.2, 0.9]}
-            colors={[colors.primaryDark, colors.primary]}
-        >
+        <View style={styles.container}>
 
             <View style={styles.firstBar}>
                 <TouchableOpacity background={TouchableNativeFeedback.Ripple('red')} onPress={()=>navigation.openDrawer() }>
-                    <MaterialCommunityIcons size={30} name='text' style={styles.firstBarChild}/>
+                    <MaterialCommunityIcons size={25} name='text' style={styles.firstBarChild}/>
                 </TouchableOpacity>
                
-                <Text style={[styles.firstBarChild, {fontSize: 23}]}>CONECTA</Text>
+                <Text style={[styles.firstBarChild, {fontSize: fonts.input}]}>CONECTA</Text>
 
 
                 <TouchableOpacity>
                     <View style={styles.notificationBadge} />
-                    <MaterialCommunityIcons size={30} name='bell' style={styles.firstBarChild} />
+                    <MaterialCommunityIcons size={25} name='bell' style={styles.firstBarChild} />
                 </TouchableOpacity>
 
             </View>
             
-        </LinearGradient>
+        </View>
     )
 }
 }
@@ -45,6 +40,7 @@ const styles = StyleSheet.create({
     container: {
         padding: metrics.baseMargin,
         paddingTop: StatusBar.currentHeight + metrics.baseMargin,  
+        backgroundColor: colors.primaryDark,
     },
     firstBar: {
         flexDirection: 'row',

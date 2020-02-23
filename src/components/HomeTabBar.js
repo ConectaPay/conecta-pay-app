@@ -12,15 +12,13 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
       <View style={
           { 
               flexDirection: 'row', 
-              height: 60, 
-              backgroundColor: colors.primary, 
+              height: 50, 
+              backgroundColor: colors.white, 
               alignItems: 'center', 
               justifyContent: 'space-between',
-              paddingVertical: 5,
-              paddingHorizontal: metrics.baseMargin,
-
-              borderTopLeftRadius: 0,
-              borderTopRightRadius: 0,
+              paddingHorizontal: metrics.tripleBaseMargin,
+              borderTopWidth: 1,
+              borderTopColor: colors.grayLight
           }
       }>
   
@@ -57,19 +55,19 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
           let iconName;
 
           if (route.name === 'home') 
-              iconName = 'home';
+              iconName = 'home-outline';
            else if (route.name === 'history') 
               iconName = 'history';
            else if (route.name === 'qrcode') 
               iconName = 'qrcode';
            else if (route.name === 'profile') 
-              iconName = 'account';
+              iconName = 'account-outline';
            else if (route.name === 'settings') 
-              iconName = 'wallet';
+              iconName = 'wallet-outline';
 
-         
           return (
-            <TouchableOpacity
+            <TouchableNativeFeedback
+              background={TouchableNativeFeedback.Ripple(colors.primaryLight, true)}
               accessibilityRole="button"
               accessibilityStates={isFocused ? ['selected'] : []}
               accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -78,30 +76,28 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
               onLongPress={onLongPress}
             >
               <View style={{ 
-                padding: 5,
-
-                flexDirection:   'row', 
+                width: 60,
+                height: '100%',
                 alignItems: 'center', 
                 justifyContent: 'center',
-                width: isFocused  ? 110 : 70,
-
-                borderTopRightRadius: route.name === 'profile' ? 5 : 25,
-                borderBottomRightRadius: route.name === 'profile' ? 5 : 25,
-
-                borderTopLeftRadius: route.name === 'home' ? 5 : 25,
-                borderBottomLeftRadius: route.name === 'home' ? 5 : 25,
-
-                backgroundColor: isFocused ? colors.grayLight: 'transparent', 
+                borderTopWidth: 1,
+                borderTopColor:  isFocused ? colors.primaryDark : 'transparent',
               }}>
 
-                  
-                <MaterialCommunityIcons name={iconName} style={{ color: isFocused ? colors.primaryDark : colors.grayLight }} size={30} />
-               
-                <Text style={{fontSize: 10, marginHorizontal: 2, color: isFocused ? colors.primaryDark : colors.grayLight }}> { isFocused ? label : null} </Text>
+                <MaterialCommunityIcons name={iconName} style={{ color: isFocused ? colors.primaryDark : 'slategray' }} size={27} />
+
+                {
+                  !isFocused ? null :
+                    <View style={{
+                      backgroundColor: colors.primaryDark,
+                      width: 5,
+                      height: 5,
+                      borderRadius: 5,
+                  }} /> 
+                }
 
               </View>
-             
-            </TouchableOpacity>
+            </TouchableNativeFeedback>
           );
         })}
       </View>

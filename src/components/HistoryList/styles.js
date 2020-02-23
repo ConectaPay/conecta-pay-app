@@ -2,28 +2,25 @@ import { StyleSheet } from 'react-native'
 import { metrics, fonts, colors } from '../../constants';
 
 const styles = StyleSheet.create({
-    containerList: { 
-        width: '100%',
-        paddingBottom: metrics.doubleBaseMargin
-    },
 
     containerItem: {
-        backgroundColor: colors.white,
-        borderBottomWidth: 1,
-        borderBottomColor: colors.grayLight,
-        padding: metrics.baseMargin,
+        margin: metrics.smallMargin,
         justifyContent: 'space-between',
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingVertical: metrics.baseMargin,
+        
+        borderBottomWidth: 1,
+        borderBottomColor: colors.grayLight
     },
     itemInfoContainer: {
         flexGrow: 1,
-        marginLeft: metrics.baseMargin,
+        marginLeft: metrics.smallMargin,
         justifyContent: 'space-between', 
     },
     itemIcon: {
-        width: 40,
-        height: 40,
+        width: 50,
+        height: 50,
         borderRadius: 25,
     },
     itemTitle: {

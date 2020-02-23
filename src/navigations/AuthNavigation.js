@@ -1,8 +1,10 @@
 import React from 'react';
 import 'react-native-gesture-handler';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
 
 import { StatusBar } from 'react-native';
 
@@ -20,6 +22,7 @@ export default function AuthNavigation()
   const AuthStack = createStackNavigator();
   
   return(
+    <SafeAreaProvider>
     <NavigationContainer>
       <AuthStack.Navigator 
         initialRouteName="Welcome"         
@@ -71,5 +74,6 @@ export default function AuthNavigation()
 
       </AuthStack.Navigator>
     </NavigationContainer>
+    </SafeAreaProvider>
   );
 }

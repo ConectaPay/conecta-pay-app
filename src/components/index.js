@@ -3,6 +3,7 @@ import InputTemplate from './Form/InputTemplate';
 import HeaderBar from './HeaderBar';
 import HomeTabBar from './HomeTabBar';
 import SendToList from './SendToList';
-import HistoryList from './HistoryList';
+import { HistoryShortList, HistoryFullList} from './HistoryList';
 
-export { InputTemplate, HeaderBar, HomeTabBar, SendToList, HistoryList };
+
+export { InputTemplate, HeaderBar, HomeTabBar, SendToList,  HistoryShortList, HistoryFullList };

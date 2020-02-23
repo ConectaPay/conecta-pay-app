@@ -18,6 +18,16 @@ export default class index extends Component {
               image: require('../../assets/splash.png')
             },
             {
+              id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+              name: 'Roberta Miranda',
+              image: require('../../assets/splash.png')
+            },
+            {
+              id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+              name: 'Roberta Miranda',
+              image: require('../../assets/splash.png')
+            },
+            {
               id: '58694a0f-3da1-471f-bd96-145571e29d72',
               name: 'Hugo Boss',
             },

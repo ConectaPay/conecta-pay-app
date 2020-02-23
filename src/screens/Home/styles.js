@@ -10,32 +10,39 @@ const styles = StyleSheet.create({
     },
     topContainer: {
         width: '100%',
-        height: 115,
-        marginBottom: 35
+        height: 140,
+        marginBottom: 50,
+        alignItems: 'center',
+        backgroundColor: colors.primaryDark
+    },
+    balanceContainer: {
+        marginTop: metrics.doubleBaseMargin,
+        alignItems: 'center',
+    },
+    amountBig: {
+        fontWeight: 'bold',
+        fontSize: 30,
+        color: colors.white,
+    },
+    amountDescription: {
+        fontSize: fonts.regular,
+        color: colors.grayLight,
+        alignContent: 'center',
+        justifyContent: 'center'
     },
     card: {
         flex: 1,
         zIndex: 1,
-        width: '90%',
+        width: '80%',
+        elevation: 3,
         alignSelf: 'center',
         position: 'absolute',
+        top: 100,
         backgroundColor: colors.white,
-        marginHorizontal: metrics.baseMargin,
         padding: metrics.doubleBaseMargin,
-        borderTopLeftRadius: 55,
-        borderTopRightRadius: 55,
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius: 5,
+        borderRadius: 20,
     },
-    amountBig: {
-        fontWeight: 'bold',
-        fontSize: fonts.big,
-        color: colors.primaryDark,
-    },
-    amountDescription: {
-        fontSize: fonts.medium,
-        color: colors.grayDark,
-    },
+   
     divider: {
         height: 30,
         width: 1,
@@ -43,26 +50,27 @@ const styles = StyleSheet.create({
         backgroundColor: colors.grayLight,
         marginHorizontal:  metrics.baseMargin,
     },
+    
     rowContainer: {
         flex: 1, 
         flexDirection: 'row',
         justifyContent:'space-between'
     },
+   
     btnContainer: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10,
-        paddingVertical: 2,
     },
     btnIcon: {
-        color: colors.primaryDark,
+        color:  colors.dark,
         fontSize: fonts.big,
         fontWeight: 'bold',
         marginBottom: 3,
     },
     btnText: {
-        color: colors.primaryDark,
+        color: colors.dark,
         fontSize: fonts.small,
         fontWeight: 'bold',
     },
@@ -70,35 +78,41 @@ const styles = StyleSheet.create({
     content: {
         flex: 1,
         width: '100%',
-        padding: metrics.doubleBaseMargin,
+        alignSelf: 'center',
+        alignItems: 'center',
+        paddingTop: metrics.tripleBaseMargin,
     },
 
     sendToContainerHeader: {
-        marginTop: metrics.baseMargin,
         flexDirection: 'row',
         justifyContent: 'space-between',
+        marginBottom: metrics.smallMargin,
+        width: '95%',
     },
     sendToContainer: {
-        flex: 2,
-        width: '100%',
-        paddingHorizontal: metrics.smallMargin,
+        flex: 1.3,
+        width: '95%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+        marginBottom: metrics.doubleBaseMargin,
     },
 
     historyContainer: {
-        flex: 3.5,
-        width: '100%',
-        padding: metrics.doubleBaseMargin,
-        elevation: 2,
-        borderRadius: 15,
+        flex: 4,
+        width: '95%',
+        
+        /** 
+        elevation: 3,
+        borderRadius: metrics.baseRadius,
         backgroundColor: 'white',
-        marginTop: metrics.baseMargin,
+        */
+        marginTop: metrics.doubleBaseMargin,
     },
     historyTitle: {
         fontSize: fonts.medium,
         fontWeight: 'bold',
-        paddingBottom: metrics.baseMargin,
-        borderBottomWidth: 1,
-        borderBottomColor: colors.grayLight,
+        marginBottom: metrics.smallMargin,
     }
 
    

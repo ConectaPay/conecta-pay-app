@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
 import HomeNavigation from './HomeNavigation';
 
 import { colors, fonts } from '../constants';
 import { HeaderBar } from '../components';
 
 import Settings from '../screens/Settings';
+import SideBar from '../components/SideBar';
 
 function NotificationsScreen({ navigation }) {
   return (
@@ -23,7 +23,9 @@ export default function HomeDrawerNavigation() {
   return (
       <Drawer.Navigator 
         initialRouteName="Home"
-        drawerType='back'>
+        drawerType='back'
+        drawerContent={props => <SideBar {...props} />} 
+        >
 
         <Drawer.Screen 
         name="Home" 
@@ -42,7 +44,12 @@ export default function HomeDrawerNavigation() {
             }
         }} />
         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+
         <Drawer.Screen name="Settings" component={Settings} />
+
+
+
+
       </Drawer.Navigator>
   );
 }
