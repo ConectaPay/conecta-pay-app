@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         top: 100,
         backgroundColor: colors.white,
         padding: metrics.doubleBaseMargin,
-        borderRadius: 20,
+        borderRadius: 40,
     },
    
     divider: {
@@ -64,13 +64,13 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     btnIcon: {
-        color:  colors.dark,
+        color:  colors.accent,
         fontSize: fonts.big,
         fontWeight: 'bold',
         marginBottom: 3,
     },
     btnText: {
-        color: colors.dark,
+        color: colors.accent,
         fontSize: fonts.small,
         fontWeight: 'bold',
     },
@@ -87,11 +87,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginBottom: metrics.smallMargin,
-        width: '95%',
+        width: '90%',
     },
     sendToContainer: {
         flex: 1.3,
-        width: '95%',
+        width: '90%',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'transparent',
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
 
     historyContainer: {
         flex: 4,
-        width: '95%',
+        width: '90%',
         
         /** 
         elevation: 3,

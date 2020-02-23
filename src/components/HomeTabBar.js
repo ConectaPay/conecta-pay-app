@@ -13,12 +13,12 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
           { 
               flexDirection: 'row', 
               height: 50, 
-              backgroundColor: colors.white, 
+              backgroundColor: colors.grayLight, 
               alignItems: 'center', 
               justifyContent: 'space-between',
               paddingHorizontal: metrics.tripleBaseMargin,
               borderTopWidth: 1,
-              borderTopColor: colors.grayLight
+              borderTopColor: colors.grayMedium
           }
       }>
   
@@ -67,7 +67,7 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
 
           return (
             <TouchableNativeFeedback
-              background={TouchableNativeFeedback.Ripple(colors.primaryLight, true)}
+              background={TouchableNativeFeedback.Ripple(colors.grayDark, true)}
               accessibilityRole="button"
               accessibilityStates={isFocused ? ['selected'] : []}
               accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -80,16 +80,16 @@ export default function HomeTabBar({ state, descriptors, navigation }) {
                 height: '100%',
                 alignItems: 'center', 
                 justifyContent: 'center',
-                borderTopWidth: 1,
-                borderTopColor:  isFocused ? colors.primaryDark : 'transparent',
+                borderTopWidth: 2,
+                borderTopColor:  isFocused ? colors.accent : 'transparent',
               }}>
 
-                <MaterialCommunityIcons name={iconName} style={{ color: isFocused ? colors.primaryDark : 'slategray' }} size={27} />
+                <MaterialCommunityIcons name={iconName} style={{ color: isFocused ? colors.accent : colors.grayDark }} size={27} />
 
                 {
                   !isFocused ? null :
                     <View style={{
-                      backgroundColor: colors.primaryDark,
+                      backgroundColor: colors.accent,
                       width: 5,
                       height: 5,
                       borderRadius: 5,

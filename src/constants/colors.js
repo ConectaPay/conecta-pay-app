@@ -8,21 +8,18 @@ const colors = {
     primaryDark: '#01579B',
     primary: '#0277BD',
     primaryLight: '#B3E5FC', 
-    accent: '#023464',
-    accent: '#304FFE',
+
     accent: '#2a5298',
-    accent: '#0a3d62',
+    accent: '#023464',
    
     /** 
     #1e3c72   #2a5298 //azul deep
 
     #4b6cb7   #182848
     */
-
     darkblue: '#1e3c72', //
     magenta: '#474787', //clean 
     grayDark2: '#2C3A47',
-
     silver: '#bdc3c7',
     white: '#ffffff',
     blueSky: '#58D8F4',

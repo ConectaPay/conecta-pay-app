@@ -17,7 +17,7 @@ export default class  HeaderBar extends React.Component {
 
             <View style={styles.firstBar}>
                 <TouchableOpacity background={TouchableNativeFeedback.Ripple('red')} onPress={()=>navigation.openDrawer() }>
-                    <MaterialCommunityIcons size={25} name='text' style={styles.firstBarChild}/>
+                    <MaterialCommunityIcons size={27} name='text' style={styles.firstBarChild}/>
                 </TouchableOpacity>
                
                 <Text style={[styles.firstBarChild, {fontSize: fonts.input}]}>CONECTA</Text>
@@ -25,7 +25,7 @@ export default class  HeaderBar extends React.Component {
 
                 <TouchableOpacity>
                     <View style={styles.notificationBadge} />
-                    <MaterialCommunityIcons size={25} name='bell' style={styles.firstBarChild} />
+                    <MaterialCommunityIcons size={27} name='bell' style={styles.firstBarChild} />
                 </TouchableOpacity>
 
             </View>
