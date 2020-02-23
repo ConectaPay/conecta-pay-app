@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         top: 100,
         backgroundColor: colors.white,
         padding: metrics.doubleBaseMargin,
-        borderRadius: 40,
+        borderRadius: 10,
     },
    
     divider: {

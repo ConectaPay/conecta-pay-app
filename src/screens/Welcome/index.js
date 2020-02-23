@@ -36,8 +36,7 @@ export default function index ({ navigation })
 
        
                 <View style={{ flexDirection: 'row'}}>
-                    <Text style={styles.title1}>Conecta</Text> 
-                    <Text style={styles.title2}>Pay</Text>
+                    <Image style={styles.logo} source={ require('../../assets/conecta.png') } />
                 </View>
                 <Text style={styles.slogan}> Seus pagamentos na velocidade da luz</Text>
                 <Image style={styles.image} source={ require('../../assets/splash.png') } />

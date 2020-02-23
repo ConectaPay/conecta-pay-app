@@ -11,6 +11,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: metrics.tripleBaseMargin,
     },
+    logo: {
+        width: '85%',
+        height: 80
+    },
     title1: {
         color: colors.primaryDark,
         fontSize: fonts.big + fonts.big,
@@ -27,7 +31,7 @@ const styles = StyleSheet.create({
         marginTop: metrics.baseMargin,
     },
     image: {
-        height: 400,
+        height: 350,
         alignSelf: 'center',
         width: '100%',
         margin: metrics.tripleBaseMargin,
