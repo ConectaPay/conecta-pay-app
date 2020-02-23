@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     topContainer: {
         width: '100%',
         height: 140,
-        marginBottom: 50,
+        marginBottom: 40,
         alignItems: 'center',
         backgroundColor: colors.primaryDark
     },
